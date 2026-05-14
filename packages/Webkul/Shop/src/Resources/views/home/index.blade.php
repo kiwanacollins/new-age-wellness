@@ -334,19 +334,19 @@
 
             <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
                 @foreach ([
-                    ['icon'=>'😴','title'=>'Better Sleep',         'href'=>route('shop.search.index',['query'=>'sleep wellness'])],
-                    ['icon'=>'🩹','title'=>'Pain Relief',          'href'=>route('shop.search.index',['query'=>'pain relief'])],
-                    ['icon'=>'🔄','title'=>'Improved Circulation', 'href'=>route('shop.search.index',['query'=>'blood circulation'])],
-                    ['icon'=>'🏃','title'=>'Recovery &amp; Relaxation','href'=>route('shop.search.index',['query'=>'recovery'])],
-                    ['icon'=>'⚡','title'=>'Energy &amp; Vitality', 'href'=>route('shop.search.index',['query'=>'energy vitality'])],
-                    ['icon'=>'👴','title'=>'Elderly Care',         'href'=>route('shop.search.index',['query'=>'elderly care'])],
+                    ['icon' => 'moon', 'title' => 'Better Sleep',         'href' => route('shop.search.index', ['query' => 'sleep wellness'])],
+                    ['icon' => 'stethoscope', 'title' => 'Pain Relief',          'href' => route('shop.search.index', ['query' => 'pain relief'])],
+                    ['icon' => 'refresh', 'title' => 'Improved Circulation', 'href' => route('shop.search.index', ['query' => 'blood circulation'])],
+                    ['icon' => 'run', 'title' => 'Recovery &amp; Relaxation', 'href' => route('shop.search.index', ['query' => 'recovery'])],
+                    ['icon' => 'bolt', 'title' => 'Energy &amp; Vitality', 'href' => route('shop.search.index', ['query' => 'energy vitality'])],
+                    ['icon' => 'user', 'title' => 'Elderly Care',         'href' => route('shop.search.index', ['query' => 'elderly care'])],
                 ] as $goal)
                     <a
                         href="{{ $goal['href'] }}"
                         class="naw-goal-card flex flex-col items-center gap-3 rounded-2xl bg-white px-4 py-6 text-center no-underline shadow-sm ring-1 ring-gray-100"
                         aria-label="{!! $goal['title'] !!} products Kenya"
                     >
-                        <span class="flex h-14 w-14 items-center justify-center rounded-full bg-green-50 text-3xl">{{ $goal['icon'] }}</span>
+                        <span class="flex h-14 w-14 items-center justify-center rounded-full bg-green-50 text-green-700">{!! $iconSvg($goal['icon'], 'h-7 w-7') !!}</span>
                         <span class="text-sm font-semibold text-gray-800 leading-snug">{!! $goal['title'] !!}</span>
                     </a>
                 @endforeach
@@ -368,15 +368,15 @@
 
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ([
-                    ['🎯','Premium Wellness Products',      'Carefully selected health gadgets and wellness solutions reviewed by our expert team.'],
-                    ['🚚','Fast Delivery Across Kenya',     'Nairobi, Mombasa, Kisumu, Nakuru, Eldoret &amp; more. Same-day delivery available in Nairobi.'],
-                    ['🔒','Secure Payment Options',         'M-Pesa, Visa/Mastercard, and cash on delivery — flexible and safe payment for all customers.'],
-                    ['🎧','Expert Customer Support',        'Professional guidance before and after your purchase. We\'re here to help you get the most value.'],
-                    ['🏆','Trusted Wellness Store',         'Focused on quality, comfort, and modern health solutions for Kenyan households.'],
-                    ['↩️', 'Hassle-free Returns',           'Not satisfied? We offer easy returns and exchanges so you can shop with complete confidence.'],
+                    ['target', 'Premium Wellness Products',      'Carefully selected health gadgets and wellness solutions reviewed by our expert team.'],
+                    ['truck', 'Fast Delivery Across Kenya',     'Nairobi, Mombasa, Kisumu, Nakuru, Eldoret &amp; more. Same-day delivery available in Nairobi.'],
+                    ['lock', 'Secure Payment Options',         'M-Pesa, Visa/Mastercard, and cash on delivery — flexible and safe payment for all customers.'],
+                    ['support', 'Expert Customer Support',        'Professional guidance before and after your purchase. We\'re here to help you get the most value.'],
+                    ['award', 'Trusted Wellness Store',         'Focused on quality, comfort, and modern health solutions for Kenyan households.'],
+                    ['reply', 'Hassle-free Returns',           'Not satisfied? We offer easy returns and exchanges so you can shop with complete confidence.'],
                 ] as $why)
                     <div class="flex gap-4 rounded-2xl bg-gray-50 p-5 shadow-sm ring-1 ring-gray-100">
-                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-100 text-2xl">{{ $why[0] }}</span>
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-100 text-green-700">{!! $iconSvg($why[0], 'h-6 w-6') !!}</span>
                         <div>
                             <h3 class="font-semibold text-gray-900">{{ $why[1] }}</h3>
                             <p class="mt-1 text-sm text-gray-600">{!! $why[2] !!}</p>
@@ -419,7 +419,8 @@
                         'Real customer reviews &amp; ratings',
                     ] as $point)
                         <li class="flex items-center gap-2 text-green-100">
-                            <span class="text-green-300">✓</span> {!! $point !!}
+                            <span class="text-green-300">{!! $iconSvg('check', 'h-4 w-4') !!}</span>
+                            {!! $point !!}
                         </li>
                     @endforeach
                 </ul>
@@ -461,7 +462,8 @@
                             href="{{ route('shop.search.index') }}"
                             class="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-7 py-3.5 font-bold text-black shadow-md transition-colors hover:bg-amber-500"
                         >
-                            🛍️ Shop the Sale
+                            {!! $iconSvg('cart', 'h-5 w-5') !!}
+                            Shop the Sale
                         </a>
                         <a
                             href="https://wa.me/254700000000?text=Hi!%20I%27d%20like%20to%20order%20wellness%20products"
@@ -469,7 +471,8 @@
                             rel="noopener noreferrer"
                             class="inline-flex items-center gap-2 rounded-xl bg-white/20 px-7 py-3.5 font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/30"
                         >
-                            📱 Order via WhatsApp
+                            {!! $iconSvg('phone', 'h-5 w-5') !!}
+                            Order via WhatsApp
                         </a>
                     </div>
                 </div>
@@ -491,15 +494,15 @@
 
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ([
-                    ['📱','Best Health Gadgets for Home Use in Kenya',            'Discover the top-rated health gadgets every Kenyan household should have for daily wellness support.'],
-                    ['🔄','How to Improve Blood Circulation Naturally',            'Learn practical tips and wellness devices that help boost blood circulation for better energy and health.'],
-                    ['🫁','Benefits of Oxygen Therapy at Home',                   'Find out how home oxygen therapy devices can improve breathing, energy levels, and overall wellbeing.'],
-                    ['💼','Best Wellness Products for Busy Professionals',         'For the modern Kenyan professional — wellness solutions that fit your lifestyle and busy schedule.'],
-                    ['🩺','Top Pain Relief Devices in Kenya',                     'Explore the most effective pain relief gadgets available online in Kenya, reviewed by our wellness team.'],
-                    ['🏠','Home Wellness Gadgets Every Family Should Have',        'Build a healthier home with these essential wellness devices for families across Kenya.'],
+                    ['phone', 'Best Health Gadgets for Home Use in Kenya',            'Discover the top-rated health gadgets every Kenyan household should have for daily wellness support.'],
+                    ['refresh', 'How to Improve Blood Circulation Naturally',            'Learn practical tips and wellness devices that help boost blood circulation for better energy and health.'],
+                    ['lungs', 'Benefits of Oxygen Therapy at Home',                   'Find out how home oxygen therapy devices can improve breathing, energy levels, and overall wellbeing.'],
+                    ['briefcase', 'Best Wellness Products for Busy Professionals',         'For the modern Kenyan professional — wellness solutions that fit your lifestyle and busy schedule.'],
+                    ['stethoscope', 'Top Pain Relief Devices in Kenya',                     'Explore the most effective pain relief gadgets available online in Kenya, reviewed by our wellness team.'],
+                    ['home', 'Home Wellness Gadgets Every Family Should Have',        'Build a healthier home with these essential wellness devices for families across Kenya.'],
                 ] as $i => $blog)
                     <article class="flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-100 transition-shadow hover:shadow-md">
-                        <span class="mb-3 text-3xl">{{ $blog[0] }}</span>
+                        <span class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-50 text-green-700">{!! $iconSvg($blog[0], 'h-5 w-5') !!}</span>
                         <h3 class="font-semibold text-gray-900 leading-snug">{{ $blog[1] }}</h3>
                         <p class="mt-2 text-sm text-gray-600 leading-relaxed">{{ $blog[2] }}</p>
                         <a
@@ -564,7 +567,7 @@
                         {{-- Stars --}}
                         <div class="flex gap-0.5">
                             @for ($s = 0; $s < $testimonial['stars']; $s++)
-                                <span class="naw-star text-lg">★</span>
+                                <span class="naw-star text-lg">{!! $iconSvg('star', 'h-4 w-4') !!}</span>
                             @endfor
                         </div>
 
@@ -614,17 +617,17 @@
 
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 @foreach ([
-                    ['🏙️','Nairobi',   'Same-day &amp; next-day delivery'],
-                    ['🌊','Mombasa',   '1–2 business days'],
-                    ['🐟','Kisumu',    '2–3 business days'],
-                    ['🌾','Nakuru',    '1–2 business days'],
-                    ['🌄','Eldoret',   '2–3 business days'],
-                    ['🏘️','Thika',     '1–2 business days'],
-                    ['🏡','Kiambu',    'Same-day available'],
-                    ['🗺️','All Kenya', '1–5 business days'],
+                    ['city', 'Nairobi',   'Same-day &amp; next-day delivery'],
+                    ['city', 'Mombasa',   '1–2 business days'],
+                    ['city', 'Kisumu',    '2–3 business days'],
+                    ['city', 'Nakuru',    '1–2 business days'],
+                    ['city', 'Eldoret',   '2–3 business days'],
+                    ['city', 'Thika',     '1–2 business days'],
+                    ['city', 'Kiambu',    'Same-day available'],
+                    ['globe', 'All Kenya', '1–5 business days'],
                 ] as $city)
                     <div class="flex items-center gap-3 rounded-xl bg-white/10 p-4 backdrop-blur-sm">
-                        <span class="text-2xl">{{ $city[0] }}</span>
+                        <span class="text-green-200">{!! $iconSvg($city[0], 'h-6 w-6') !!}</span>
                         <div>
                             <p class="font-semibold">{{ $city[1] }}</p>
                             <p class="text-xs text-green-200">{!! $city[2] !!}</p>
@@ -635,7 +638,7 @@
 
             <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <div class="flex items-center gap-3 rounded-xl bg-white/10 px-6 py-3">
-                    <span class="text-xl">📱</span>
+                    <span class="text-green-200">{!! $iconSvg('phone', 'h-5 w-5') !!}</span>
                     <span class="font-semibold">Payment: M-Pesa · Visa · Mastercard · Cash on Delivery</span>
                 </div>
                 <a
@@ -706,7 +709,8 @@
                     href="{{ route('shop.search.index') }}"
                     class="naw-pulse inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-lg font-bold text-green-700 shadow-lg transition-colors hover:bg-green-50"
                 >
-                    🛒 Shop Now
+                    {!! $iconSvg('cart', 'h-5 w-5') !!}
+                    Shop Now
                 </a>
                 <a
                     href="https://wa.me/254700000000?text=Hi!%20I%27d%20like%20to%20order%20wellness%20products%20from%20New%20Age%20Wellness%20Solutions"
