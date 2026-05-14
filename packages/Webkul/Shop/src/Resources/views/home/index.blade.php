@@ -55,13 +55,13 @@
     {{-- WebSite Schema --}}
     <script type="application/ld+json">
     {
-        "@context":"https://schema.org",
-        "@type":"WebSite",
+        "@@context":"https://schema.org",
+        "@@type":"WebSite",
         "name":"New Age Wellness Solutions",
         "url":"{{ url('/') }}",
         "description":"Kenya's trusted store for premium health gadgets and wellness products",
         "potentialAction":{
-            "@type":"SearchAction",
+            "@@type":"SearchAction",
             "target":"{{ route('shop.search.index') }}?query={search_term_string}",
             "query-input":"required name=search_term_string"
         }
@@ -71,11 +71,11 @@
     {{-- Organization Schema --}}
     <script type="application/ld+json">
     {
-        "@context":"https://schema.org",
-        "@type":"Organization",
+        "@@context":"https://schema.org",
+        "@@type":"Organization",
         "name":"New Age Wellness Solutions",
         "url":"{{ url('/') }}",
-        "areaServed":{"@type":"Country","name":"Kenya"},
+        "areaServed":{"@@type":"Country","name":"Kenya"},
         "logo":"{{ asset('images/hero-modern-wellness-products-banner.webp') }}"
     }
     </script>
@@ -83,14 +83,14 @@
     {{-- FAQ Schema --}}
     <script type="application/ld+json">
     {
-        "@context":"https://schema.org",
-        "@type":"FAQPage",
+        "@@context":"https://schema.org",
+        "@@type":"FAQPage",
         "mainEntity":[
-            {"@type":"Question","name":"Do you deliver wellness products across Kenya?","acceptedAnswer":{"@type":"Answer","text":"Yes, we deliver to Nairobi, Mombasa, Kisumu, Nakuru, Eldoret, Thika, Kiambu and all major towns in Kenya."}},
-            {"@type":"Question","name":"Do you accept M-Pesa payments?","acceptedAnswer":{"@type":"Answer","text":"Yes, we accept M-Pesa, card payments, and cash on delivery."}},
-            {"@type":"Question","name":"Are your health gadgets original?","acceptedAnswer":{"@type":"Answer","text":"Yes, all our products are genuine, expert-reviewed wellness devices sourced from trusted manufacturers."}},
-            {"@type":"Question","name":"How long does delivery take in Nairobi?","acceptedAnswer":{"@type":"Answer","text":"Same-day or next-day delivery in Nairobi. 1–3 business days for other towns."}},
-            {"@type":"Question","name":"Can I pay on delivery?","acceptedAnswer":{"@type":"Answer","text":"Yes, cash on delivery is available for orders within Nairobi and selected towns."}}
+            {"@@type":"Question","name":"Do you deliver wellness products across Kenya?","acceptedAnswer":{"@@type":"Answer","text":"Yes, we deliver to Nairobi, Mombasa, Kisumu, Nakuru, Eldoret, Thika, Kiambu and all major towns in Kenya."}},
+            {"@@type":"Question","name":"Do you accept M-Pesa payments?","acceptedAnswer":{"@@type":"Answer","text":"Yes, we accept M-Pesa, card payments, and cash on delivery."}},
+            {"@@type":"Question","name":"Are your health gadgets original?","acceptedAnswer":{"@@type":"Answer","text":"Yes, all our products are genuine, expert-reviewed wellness devices sourced from trusted manufacturers."}},
+            {"@@type":"Question","name":"How long does delivery take in Nairobi?","acceptedAnswer":{"@@type":"Answer","text":"Same-day or next-day delivery in Nairobi. 1–3 business days for other towns."}},
+            {"@@type":"Question","name":"Can I pay on delivery?","acceptedAnswer":{"@@type":"Answer","text":"Yes, cash on delivery is available for orders within Nairobi and selected towns."}}
         ]
     }
     </script>
@@ -671,7 +671,7 @@
                     ['Do you deliver wellness products across Kenya?',             'Yes! We deliver to Nairobi, Mombasa, Kisumu, Nakuru, Eldoret, Thika, Kiambu and all major towns across Kenya. Same-day delivery is available in Nairobi.'],
                     ['Do you accept M-Pesa payments?',                             'Absolutely. We accept M-Pesa, Visa, Mastercard, and cash on delivery. M-Pesa is our most popular payment method.'],
                     ['Are your health gadgets original and genuine?',              'Yes. Every product on our store is carefully vetted and sourced from trusted manufacturers. We only list genuine, quality wellness devices.'],
-                    ['How long does delivery take in Nairobi?',                    'Same-day or next-day delivery in Nairobi CBD and most estates. We'll confirm your delivery timeline when you place your order.'],
+                    ['How long does delivery take in Nairobi?',                    'Same-day or next-day delivery in Nairobi CBD and most estates. We\'ll confirm your delivery timeline when you place your order.'],
                     ['Can I order wellness products online in Kenya?',             'Yes! You can order directly on our website, or via WhatsApp. We make it easy to shop for wellness products from anywhere in Kenya.'],
                     ['Which wellness gadgets are best for elderly people?',        'We recommend foot massagers, blood circulation devices, TENS pain relief machines, and home oxygen therapy devices for elderly customers. Our team can advise you.'],
                     ['Do your products come with a warranty?',                     'Yes, most of our wellness gadgets come with manufacturer warranties. Check the individual product pages for warranty details.'],
@@ -741,7 +741,7 @@
     {{-- ════════════════════════════════════════════════════════════════════
          VUE COMPONENT — Hero image slider (v-hero-slider)
     ═════════════════════════════════════════════════════════════════════ --}}
-    @pushOnce('scripts')
+    @push('scripts')
         <script type="text/x-template" id="v-hero-slider-template">
             <div class="relative aspect-video w-full overflow-hidden rounded-2xl bg-gray-100">
                 <template v-for="(img, idx) in images" :key="idx">
@@ -811,6 +811,6 @@
                 },
             });
         </script>
-    @endPushOnce
+    @endpush
 
 </x-shop::layouts>
