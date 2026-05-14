@@ -858,6 +858,7 @@ return [
                 'japanese-yen' => 'Японська єна (JPY)',
                 'jordanian-dinar' => 'Йорданський динар (JOD)',
                 'kazakhstani-tenge' => 'Казахстанський тенге (KZT)',
+                'kenyan-shilling' => 'Кенійський шилінг (KES)',
                 'kuwaiti-dinar' => 'Кувейтський динар (KWD)',
                 'lebanese-pound' => 'Ліванський фунт (LBP)',
                 'libyan-dinar' => 'Лівійський динар (LYD)',

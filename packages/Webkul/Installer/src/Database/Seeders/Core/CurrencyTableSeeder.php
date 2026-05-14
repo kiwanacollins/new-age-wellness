@@ -39,6 +39,7 @@ class CurrencyTableSeeder extends Seeder
         'INR' => '₹',
         'JOD' => 'د.ا',
         'JPY' => '¥',
+        'KES' => 'KSh',
         'KRW' => '₩',
         'KWD' => 'د.ك',
         'KZT' => '₸',
