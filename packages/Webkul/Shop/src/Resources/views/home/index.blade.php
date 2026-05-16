@@ -365,12 +365,6 @@
 
             {{-- Left: Text content --}}
             <div class="z-10 flex w-full flex-col gap-6 md:w-1/2">
-                {{-- Eyebrow badge --}}
-                <div class="inline-flex w-max items-center gap-2 rounded-full bg-green-100 px-4 py-1.5 text-sm font-semibold text-green-700">
-                    {!! $iconSvg('leaf', 'h-4 w-4') !!}
-                    Kenya's #1 Wellness Store
-                </div>
-
                 {{-- H1 --}}
                 <h1 class="font-dmserif text-4xl font-bold leading-tight text-gray-900 max-md:text-3xl max-sm:text-2xl">
                     Buy Premium Health Gadgets &amp; Wellness Products in Kenya
@@ -403,8 +397,6 @@
                 <div class="flex flex-wrap gap-3 pt-1">
                     @foreach ([
                         ['truck', 'Fast Kenya Delivery'],
-                        ['lock', 'Secure Payments'],
-                        ['phone', 'M-Pesa Accepted'],
                         ['support', 'Expert Support'],
                     ] as $badge)
                         <span class="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-xs font-medium text-gray-700 shadow-sm ring-1 ring-gray-100">
@@ -430,13 +422,12 @@
     </section>
 
     {{-- ════════════════════════════════════════════════════════════════════
-         TRUST ROW — Nationwide delivery · Secure payments · M-Pesa · Support
+         TRUST ROW — Nationwide delivery · Trusted products · Support
     ═════════════════════════════════════════════════════════════════════ --}}
     <div class="border-y border-gray-100 bg-white py-5 shadow-sm" aria-label="Store trust badges">
         <div class="container mx-auto flex flex-wrap justify-center gap-x-10 gap-y-4 px-4 md:px-8">
             @foreach ([
                 ['truck', 'Nationwide Delivery in Kenya',  'Same-day Nairobi · 1–3 days elsewhere'],
-                ['lock', 'Secure Payments',               'M-Pesa, Card &amp; Cash on Delivery'],
                 ['shield-check', 'Trusted Wellness Products',     'Expert-reviewed &amp; quality-assured'],
                 ['support', 'Expert Customer Support',       'Before &amp; after-purchase guidance'],
                 ['award', 'Premium Quality',               'Genuine gadgets, satisfaction guaranteed'],
@@ -571,7 +562,6 @@
                 @foreach ([
                     ['target', 'Premium Wellness Products',      'Carefully selected health gadgets and wellness solutions reviewed by our expert team.'],
                     ['truck', 'Fast Delivery Across Kenya',     'Nairobi, Mombasa, Kisumu, Nakuru, Eldoret &amp; more. Same-day delivery available in Nairobi.'],
-                    ['lock', 'Secure Payment Options',         'M-Pesa, Visa/Mastercard, and cash on delivery — flexible and safe payment for all customers.'],
                     ['support', 'Expert Customer Support',        'Professional guidance before and after your purchase. We\'re here to help you get the most value.'],
                     ['award', 'Trusted Wellness Store',         'Focused on quality, comfort, and modern health solutions for Kenyan households.'],
                     ['reply', 'Hassle-free Returns',           'Not satisfied? We offer easy returns and exchanges so you can shop with complete confidence.'],
@@ -636,6 +626,43 @@
     </section>
 
     {{-- ════════════════════════════════════════════════════════════════════
+         SECTION 6 · EDUCATIONAL / BLOG SECTION
+    ═════════════════════════════════════════════════════════════════════ --}}
+    <section id="wellness-tips" class="bg-gray-50 py-16 max-md:py-10" aria-labelledby="blog-heading">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="mb-10 text-center">
+                <h2 id="blog-heading" class="font-dmserif text-3xl font-bold text-gray-900 max-md:text-2xl">
+                    Wellness Tips &amp; Health Guides
+                </h2>
+                <p class="mt-2 text-gray-500">Expert knowledge to help you make the best wellness choices</p>
+            </div>
+
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                @foreach ([
+                    ['phone', 'Best Health Gadgets for Home Use in Kenya',            'Discover the top-rated health gadgets every Kenyan household should have for daily wellness support.'],
+                    ['refresh', 'How to Improve Blood Circulation Naturally',            'Learn practical tips and wellness devices that help boost blood circulation for better energy and health.'],
+                    ['lungs', 'Benefits of Oxygen Therapy at Home',                   'Find out how home oxygen therapy devices can improve breathing, energy levels, and overall wellbeing.'],
+                    ['briefcase', 'Best Wellness Products for Busy Professionals',         'For the modern Kenyan professional — wellness solutions that fit your lifestyle and busy schedule.'],
+                    ['stethoscope', 'Top Pain Relief Devices in Kenya',                     'Explore the most effective pain relief gadgets available online in Kenya, reviewed by our wellness team.'],
+                    ['home', 'Home Wellness Gadgets Every Family Should Have',        'Build a healthier home with these essential wellness devices for families across Kenya.'],
+                ] as $i => $blog)
+                    <article class="flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-100 transition-shadow hover:shadow-md">
+                        <span class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-50 text-green-700">{!! $iconSvg($blog[0], 'h-5 w-5') !!}</span>
+                        <h3 class="font-semibold text-gray-900 leading-snug">{{ $blog[1] }}</h3>
+                        <p class="mt-2 text-sm text-gray-600 leading-relaxed">{{ $blog[2] }}</p>
+                        <a
+                            href="{{ route('shop.search.index') }}"
+                            class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-green-600 hover:text-green-700"
+                        >
+                            Shop Related Products <span class="icon-arrow-right text-base"></span>
+                        </a>
+                    </article>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- ════════════════════════════════════════════════════════════════════
          PROMO BANNER — 10% off + urgency
     ═════════════════════════════════════════════════════════════════════ --}}
     <section class="relative overflow-hidden" aria-label="Health gadgets 10 percent off promotion Kenya">
@@ -677,43 +704,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ════════════════════════════════════════════════════════════════════
-         SECTION 6 · EDUCATIONAL / BLOG SECTION
-    ═════════════════════════════════════════════════════════════════════ --}}
-    <section id="wellness-tips" class="bg-gray-50 py-16 max-md:py-10" aria-labelledby="blog-heading">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="mb-10 text-center">
-                <h2 id="blog-heading" class="font-dmserif text-3xl font-bold text-gray-900 max-md:text-2xl">
-                    Wellness Tips &amp; Health Guides
-                </h2>
-                <p class="mt-2 text-gray-500">Expert knowledge to help you make the best wellness choices</p>
-            </div>
-
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                @foreach ([
-                    ['phone', 'Best Health Gadgets for Home Use in Kenya',            'Discover the top-rated health gadgets every Kenyan household should have for daily wellness support.'],
-                    ['refresh', 'How to Improve Blood Circulation Naturally',            'Learn practical tips and wellness devices that help boost blood circulation for better energy and health.'],
-                    ['lungs', 'Benefits of Oxygen Therapy at Home',                   'Find out how home oxygen therapy devices can improve breathing, energy levels, and overall wellbeing.'],
-                    ['briefcase', 'Best Wellness Products for Busy Professionals',         'For the modern Kenyan professional — wellness solutions that fit your lifestyle and busy schedule.'],
-                    ['stethoscope', 'Top Pain Relief Devices in Kenya',                     'Explore the most effective pain relief gadgets available online in Kenya, reviewed by our wellness team.'],
-                    ['home', 'Home Wellness Gadgets Every Family Should Have',        'Build a healthier home with these essential wellness devices for families across Kenya.'],
-                ] as $i => $blog)
-                    <article class="flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-100 transition-shadow hover:shadow-md">
-                        <span class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-50 text-green-700">{!! $iconSvg($blog[0], 'h-5 w-5') !!}</span>
-                        <h3 class="font-semibold text-gray-900 leading-snug">{{ $blog[1] }}</h3>
-                        <p class="mt-2 text-sm text-gray-600 leading-relaxed">{{ $blog[2] }}</p>
-                        <a
-                            href="{{ route('shop.search.index') }}"
-                            class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-green-600 hover:text-green-700"
-                        >
-                            Shop Related Products <span class="icon-arrow-right text-base"></span>
-                        </a>
-                    </article>
-                @endforeach
             </div>
         </div>
     </section>
