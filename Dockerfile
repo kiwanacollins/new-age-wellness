@@ -66,19 +66,32 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         sockets \
         zip \
     && pecl install imagick \
+    && pecl install redis-6.2.0 \
     && docker-php-ext-enable imagick \
+    && docker-php-ext-enable redis \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 
 COPY . .
 
-RUN cp .env.example .env \
-    && composer install \
-        --no-dev \
-        --no-interaction \
-        --prefer-dist \
-        --optimize-autoloader \
+RUN --mount=type=cache,target=/tmp/composer-cache \
+    cp .env.example .env \
+    && composer config cache-dir /tmp/composer-cache \
+    && attempts=0 \
+    && until [ "$attempts" -ge 3 ]; do \
+        composer install \
+            --no-dev \
+            --no-interaction \
+            --no-progress \
+            --prefer-dist \
+            --optimize-autoloader \
+        && break; \
+        attempts=$((attempts + 1)); \
+        echo "Composer install attempt ${attempts} failed, retrying in 5 seconds..." >&2; \
+        sleep 5; \
+    done \
+    && [ "$attempts" -lt 3 ] \
     && rm -rf /root/.composer/cache
 
 COPY --from=assets /app/public/build ./public/build

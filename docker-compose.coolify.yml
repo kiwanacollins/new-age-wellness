@@ -7,63 +7,61 @@ services:
     expose:
       - "80"
     environment:
-      APP_NAME: ${APP_NAME:-New Age Wellness}
-      APP_ENV: ${APP_ENV:-production}
-      APP_DEBUG: ${APP_DEBUG:-false}
-      APP_URL: ${APP_URL}
-      APP_KEY: ${APP_KEY}
-      APP_ADMIN_URL: ${APP_ADMIN_URL:-admin}
-      APP_TIMEZONE: ${APP_TIMEZONE:-Africa/Kampala}
-      APP_LOCALE: ${APP_LOCALE:-en}
-      APP_FALLBACK_LOCALE: ${APP_FALLBACK_LOCALE:-en}
-      APP_CURRENCY: ${APP_CURRENCY:-KES}
-      LOG_CHANNEL: ${LOG_CHANNEL:-stack}
-      LOG_LEVEL: ${LOG_LEVEL:-warning}
-      DB_CONNECTION: ${DB_CONNECTION:-mysql}
-      DB_HOST: ${DB_HOST:-mysql}
-      DB_PORT: ${DB_PORT:-3306}
-      DB_DATABASE: ${DB_DATABASE:-bagisto}
-      DB_USERNAME: ${DB_USERNAME:-bagisto}
-      DB_PASSWORD: ${DB_PASSWORD:-bagisto}
-      SESSION_DRIVER: ${SESSION_DRIVER:-database}
-      CACHE_STORE: ${CACHE_STORE:-redis}
-      QUEUE_CONNECTION: ${QUEUE_CONNECTION:-database}
-      REDIS_HOST: ${REDIS_HOST:-redis}
-      REDIS_PORT: ${REDIS_PORT:-6379}
-      REDIS_PASSWORD: ${REDIS_PASSWORD:-null}
-      ELASTICSEARCH_HOST: ${ELASTICSEARCH_HOST:-http://elasticsearch:9200}
-      ELASTICSEARCH_USER: ${ELASTICSEARCH_USER:-}
-      ELASTICSEARCH_PASS: ${ELASTICSEARCH_PASS:-}
-      RESPONSE_CACHE_ENABLED: ${RESPONSE_CACHE_ENABLED:-true}
-      MAIL_MAILER: ${MAIL_MAILER:-smtp}
-      MAIL_SCHEME: ${MAIL_SCHEME:-}
-      MAIL_HOST: ${MAIL_HOST:-}
-      MAIL_PORT: ${MAIL_PORT:-587}
-      MAIL_USERNAME: ${MAIL_USERNAME:-}
-      MAIL_PASSWORD: ${MAIL_PASSWORD:-}
-      MAIL_FROM_ADDRESS: ${MAIL_FROM_ADDRESS:-shop@example.com}
-      MAIL_FROM_NAME: ${MAIL_FROM_NAME:-Shop}
-      ADMIN_MAIL_ADDRESS: ${ADMIN_MAIL_ADDRESS:-admin@example.com}
-      ADMIN_MAIL_NAME: ${ADMIN_MAIL_NAME:-Admin}
-      CONTACT_MAIL_ADDRESS: ${CONTACT_MAIL_ADDRESS:-contact@example.com}
-      CONTACT_MAIL_NAME: ${CONTACT_MAIL_NAME:-Contact}
-      APP_AUTO_MIGRATE: ${APP_AUTO_MIGRATE:-true}
-      APP_RUN_OPTIMIZE: ${APP_RUN_OPTIMIZE:-true}
-      APP_RUN_INDEXERS: ${APP_RUN_INDEXERS:-false}
-      ENABLE_QUEUE_WORKER: ${ENABLE_QUEUE_WORKER:-true}
-      ENABLE_SCHEDULER: ${ENABLE_SCHEDULER:-true}
-      QUEUE_WORKER_QUEUES: ${QUEUE_WORKER_QUEUES:-default,broadcastable}
-      QUEUE_WORKER_SLEEP: ${QUEUE_WORKER_SLEEP:-3}
-      QUEUE_WORKER_TRIES: ${QUEUE_WORKER_TRIES:-3}
-      QUEUE_WORKER_TIMEOUT: ${QUEUE_WORKER_TIMEOUT:-120}
-      QUEUE_WORKER_MAX_TIME: ${QUEUE_WORKER_MAX_TIME:-3600}
-      AUTO_GENERATE_APP_KEY: ${AUTO_GENERATE_APP_KEY:-false}
+      APP_NAME: ${COOLIFY_APP_NAME:-New Age Wellness}
+      APP_ENV: ${COOLIFY_APP_ENV:-production}
+      APP_DEBUG: ${COOLIFY_APP_DEBUG:-false}
+      APP_URL: ${COOLIFY_APP_URL}
+      APP_KEY: ${COOLIFY_APP_KEY}
+      APP_ADMIN_URL: ${COOLIFY_APP_ADMIN_URL:-admin}
+      APP_TIMEZONE: ${COOLIFY_APP_TIMEZONE:-Africa/Kampala}
+      APP_LOCALE: ${COOLIFY_APP_LOCALE:-en}
+      APP_FALLBACK_LOCALE: ${COOLIFY_APP_FALLBACK_LOCALE:-en}
+      APP_CURRENCY: ${COOLIFY_APP_CURRENCY:-KES}
+      LOG_CHANNEL: ${COOLIFY_LOG_CHANNEL:-stack}
+      LOG_LEVEL: ${COOLIFY_LOG_LEVEL:-warning}
+      DB_CONNECTION: ${COOLIFY_DB_CONNECTION:-mysql}
+      DB_HOST: ${COOLIFY_DB_HOST:-mysql}
+      DB_PORT: ${COOLIFY_DB_PORT:-3306}
+      DB_DATABASE: ${COOLIFY_DB_DATABASE:-bagisto}
+      DB_USERNAME: ${COOLIFY_DB_USERNAME:-bagisto}
+      DB_PASSWORD: ${COOLIFY_DB_PASSWORD:-bagisto}
+      SESSION_DRIVER: ${COOLIFY_SESSION_DRIVER:-database}
+      CACHE_STORE: ${COOLIFY_CACHE_STORE:-redis}
+      QUEUE_CONNECTION: ${COOLIFY_QUEUE_CONNECTION:-database}
+      REDIS_HOST: ${COOLIFY_REDIS_HOST:-redis}
+      REDIS_PORT: ${COOLIFY_REDIS_PORT:-6379}
+      REDIS_PASSWORD: ${COOLIFY_REDIS_PASSWORD:-null}
+      ELASTICSEARCH_HOST: ${COOLIFY_ELASTICSEARCH_HOST-}
+      ELASTICSEARCH_USER: ${COOLIFY_ELASTICSEARCH_USER:-}
+      ELASTICSEARCH_PASS: ${COOLIFY_ELASTICSEARCH_PASS:-}
+      RESPONSE_CACHE_ENABLED: ${COOLIFY_RESPONSE_CACHE_ENABLED:-true}
+      MAIL_MAILER: ${COOLIFY_MAIL_MAILER:-smtp}
+      MAIL_SCHEME: ${COOLIFY_MAIL_SCHEME:-}
+      MAIL_HOST: ${COOLIFY_MAIL_HOST:-}
+      MAIL_PORT: ${COOLIFY_MAIL_PORT:-587}
+      MAIL_USERNAME: ${COOLIFY_MAIL_USERNAME:-}
+      MAIL_PASSWORD: ${COOLIFY_MAIL_PASSWORD:-}
+      MAIL_FROM_ADDRESS: ${COOLIFY_MAIL_FROM_ADDRESS:-shop@example.com}
+      MAIL_FROM_NAME: ${COOLIFY_MAIL_FROM_NAME:-Shop}
+      ADMIN_MAIL_ADDRESS: ${COOLIFY_ADMIN_MAIL_ADDRESS:-admin@example.com}
+      ADMIN_MAIL_NAME: ${COOLIFY_ADMIN_MAIL_NAME:-Admin}
+      CONTACT_MAIL_ADDRESS: ${COOLIFY_CONTACT_MAIL_ADDRESS:-contact@example.com}
+      CONTACT_MAIL_NAME: ${COOLIFY_CONTACT_MAIL_NAME:-Contact}
+      APP_AUTO_MIGRATE: ${COOLIFY_APP_AUTO_MIGRATE:-true}
+      APP_RUN_OPTIMIZE: ${COOLIFY_APP_RUN_OPTIMIZE:-true}
+      APP_RUN_INDEXERS: ${COOLIFY_APP_RUN_INDEXERS:-false}
+      ENABLE_QUEUE_WORKER: ${COOLIFY_ENABLE_QUEUE_WORKER:-true}
+      ENABLE_SCHEDULER: ${COOLIFY_ENABLE_SCHEDULER:-true}
+      QUEUE_WORKER_QUEUES: ${COOLIFY_QUEUE_WORKER_QUEUES:-default,broadcastable}
+      QUEUE_WORKER_SLEEP: ${COOLIFY_QUEUE_WORKER_SLEEP:-3}
+      QUEUE_WORKER_TRIES: ${COOLIFY_QUEUE_WORKER_TRIES:-3}
+      QUEUE_WORKER_TIMEOUT: ${COOLIFY_QUEUE_WORKER_TIMEOUT:-120}
+      QUEUE_WORKER_MAX_TIME: ${COOLIFY_QUEUE_WORKER_MAX_TIME:-3600}
+      AUTO_GENERATE_APP_KEY: ${COOLIFY_AUTO_GENERATE_APP_KEY:-false}
     depends_on:
       mysql:
         condition: service_healthy
       redis:
-        condition: service_started
-      elasticsearch:
         condition: service_started
     volumes:
       - app-storage:/var/www/html/storage
@@ -72,16 +70,16 @@ services:
     image: mysql:8.0
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: ${DB_DATABASE:-bagisto}
-      MYSQL_USER: ${DB_USERNAME:-bagisto}
-      MYSQL_PASSWORD: ${DB_PASSWORD:-bagisto}
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: ${COOLIFY_DB_DATABASE:-bagisto}
+      MYSQL_USER: ${COOLIFY_DB_USERNAME:-bagisto}
+      MYSQL_PASSWORD: ${COOLIFY_DB_PASSWORD:-bagisto}
+      MYSQL_ROOT_PASSWORD: ${COOLIFY_DB_ROOT_PASSWORD:-root}
     command:
       - --default-authentication-plugin=mysql_native_password
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-p${DB_ROOT_PASSWORD:-root}"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-p${COOLIFY_DB_ROOT_PASSWORD:-root}"]
       interval: 10s
       timeout: 5s
       retries: 10
@@ -96,13 +94,15 @@ services:
       - redis-data:/data
 
   elasticsearch:
+    profiles:
+      - search
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.24
     restart: unless-stopped
     environment:
       discovery.type: single-node
       xpack.security.enabled: "false"
       bootstrap.memory_lock: "true"
-      ES_JAVA_OPTS: ${ES_JAVA_OPTS:--Xms512m -Xmx512m}
+      ES_JAVA_OPTS: ${COOLIFY_ES_JAVA_OPTS:--Xms512m -Xmx512m}
     ulimits:
       memlock:
         soft: -1
