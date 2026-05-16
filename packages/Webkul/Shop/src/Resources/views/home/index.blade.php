@@ -366,7 +366,7 @@
             {{-- Left: Text content --}}
             <div class="z-10 flex w-full flex-col gap-6 md:w-1/2">
                 {{-- H1 --}}
-                <h1 class="font-dmserif text-4xl font-bold leading-tight text-gray-900 max-md:text-3xl max-sm:text-2xl">
+                <h1 class="font-dmserif text-4xl font-bold leading-tight text-gray-900 md:text-6xl lg:text-[7rem] md:leading-[0.94] max-md:text-3xl max-sm:text-2xl">
                     Buy Premium Health Gadgets &amp; Wellness Products in Kenya
                 </h1>
 
@@ -819,13 +819,13 @@
                     <div class="naw-delivery-cards mt-8">
                         @foreach ($deliveryCities as $city)
                             <div class="naw-delivery-card rounded-2xl bg-white p-4 md:p-5">
-                                <span class="naw-delivery-city-dot mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-50 text-green-700 md:h-16 md:w-16">
-                                    {!! $iconSvg($city[0], 'h-7 w-7 md:h-8 md:w-8') !!}
+                                <span class="naw-delivery-city-dot mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-50 text-green-700 md:h-14 md:w-14">
+                                    {!! $iconSvg($city[0], 'h-6 w-6 md:h-7 md:w-7') !!}
                                 </span>
-                                <p class="mt-4 text-center text-xl font-semibold text-green-950 md:text-2xl">{{ $city[1] }}</p>
+                                <p class="mt-3 text-center text-lg font-semibold leading-tight text-green-950 md:text-xl">{{ $city[1] }}</p>
                                 <div class="mt-3 flex items-start justify-center gap-2 text-slate-600">
-                                    <span class="mt-0.5 shrink-0 text-green-600">{!! $iconSvg('phone', 'h-5 w-5') !!}</span>
-                                    <p class="text-center text-sm leading-snug md:text-base">{!! $city[2] !!}</p>
+                                    <span class="mt-0.5 shrink-0 text-green-600">{!! $iconSvg('phone', 'h-4.5 w-4.5 md:h-5 md:w-5') !!}</span>
+                                    <p class="text-center text-xs leading-snug md:text-sm">{!! $city[2] !!}</p>
                                 </div>
                             </div>
                         @endforeach
