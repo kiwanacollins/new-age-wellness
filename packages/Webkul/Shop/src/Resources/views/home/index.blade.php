@@ -27,9 +27,50 @@
             'globe' => "<svg class=\"{$class}\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M3 12h18\"/><path d=\"M12 3a14 14 0 0 1 0 18\"/><path d=\"M12 3a14 14 0 0 0 0 18\"/></svg>",
             'check' => "<svg class=\"{$class}\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m20 6-11 11-5-5\"/></svg>",
             'star' => "<svg class=\"{$class}\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2.5 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5Z\"/></svg>",
+            'delivery-skyline' => "<svg class=\"{$class}\" viewBox=\"0 0 64 64\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M8 52V30h8v22h4V18h12v34h4V24h10v28h4V34h6v18H8Zm16-24h4v4h-4v-4Zm0 8h4v4h-4v-4Zm12-8h4v4h-4v-4Zm0 8h4v4h-4v-4Z\"/></svg>",
+            'delivery-palm' => "<svg class=\"{$class}\" viewBox=\"0 0 64 64\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M31 58h4V40c6 1 12-1 15-6-5 1-9 0-13-3 5-1 10-4 11-10-5 3-10 3-15 2 4-4 5-10 2-15-3 4-6 7-11 8-1-6-4-11-10-14 0 6 2 11 7 15-6 0-11 2-15 6 5 2 10 2 15 1-4 3-7 7-7 13 4-2 8-3 12-3 2 0 4 0 6 1v23Z\"/></svg>",
+            'delivery-sail' => "<svg class=\"{$class}\" viewBox=\"0 0 64 64\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M33 10v24h17L33 10Zm-4 5L16 35h13V15Zm-15 24c3 5 9 8 18 8s15-3 18-8H14Zm-2 10h40v4H12v-4Z\"/></svg>",
+            'delivery-peak' => "<svg class=\"{$class}\" viewBox=\"0 0 64 64\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M8 48 28 20l8 10 5-7 15 25H8Zm24-21 4 5-4 3-4-3 4-5Z\"/></svg>",
+            'delivery-pines' => "<svg class=\"{$class}\" viewBox=\"0 0 64 64\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M17 54h8v-7h8l-8-10h6l-8-10h5l-7-9-7 9h5l-8 10h6l-8 10h8v7Zm24 0h8v-6h7l-7-9h5l-7-9h4l-6-8-6 8h4l-7 9h5l-7 9h7v6Z\"/></svg>",
+            'delivery-river' => "<svg class=\"{$class}\" viewBox=\"0 0 64 64\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M44 8c-9 4-16 12-16 21 0 8 6 14 12 18 4 3 7 6 7 9H16c7-3 11-7 11-12 0-4-3-7-7-11-6-5-13-11-13-23 13 2 26 2 37-2Zm3 35c5 0 10 3 13 8H45c3-2 3-5 2-8Z\"/></svg>",
+            'delivery-leaf' => "<svg class=\"{$class}\" viewBox=\"0 0 64 64\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M50 12C31 12 18 23 15 40c7 5 16 7 24 5 10-3 17-12 17-25 0-3-1-6-2-8h-4Zm-24 25c7-1 14-5 21-12-3 9-10 16-19 20l-2-8Z\"/></svg>",
+            'delivery-kenya' => "<svg class=\"{$class}\" viewBox=\"0 0 64 64\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m28 6 8 2 4 7 9 5-2 10 7 7-5 10-10 8-13 3-9-9 1-10-6-8 6-9 10-4 0-12Z\"/></svg>",
             default => "<svg class=\"{$class}\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg>",
         };
     };
+
+    $deliveryCities = [
+        ['delivery-skyline', 'Nairobi', 'Same-day &amp; next-day delivery'],
+        ['delivery-palm', 'Mombasa', '1–2 business days'],
+        ['delivery-sail', 'Kisumu', '2–3 business days'],
+        ['delivery-peak', 'Nakuru', '1–2 business days'],
+        ['delivery-pines', 'Eldoret', '2–3 business days'],
+        ['delivery-river', 'Thika', '1–2 business days'],
+        ['delivery-leaf', 'Kiambu', 'Same-day available'],
+        ['delivery-kenya', 'All Kenya', '1–5 business days'],
+    ];
+
+    $deliveryPins = [
+        ['Eldoret', '2–3 days', 'top-[17%]', 'left-[30%]'],
+        ['Kisumu', '2–3 days', 'top-[41%]', 'left-[18%]'],
+        ['Nakuru', '1–2 days', 'top-[42%]', 'left-[46%]'],
+        ['Nairobi', 'Same-day &amp;<br>next-day', 'top-[59%]', 'left-[42%]'],
+        ['Thika', '1–2 days', 'top-[49%]', 'left-[69%]'],
+        ['Kiambu', 'Same-day<br>available', 'top-[78%]', 'left-[49%]'],
+        ['Mombasa', '1–2 days', 'top-[86%]', 'left-[78%]'],
+    ];
+
+    $contactNumber = core()->getConfigData('sales.shipping.origin.contact') ?: '254700000000';
+    $normalizedWhatsAppNumber = preg_replace('/\D+/', '', $contactNumber);
+
+    if (preg_match('/^(?:0|254)?(7\d{8}|1\d{8})$/', $normalizedWhatsAppNumber, $matches)) {
+        $normalizedWhatsAppNumber = '254'.$matches[1];
+    }
+
+    $whatsAppOrderUrl = 'https://wa.me/'.$normalizedWhatsAppNumber.'?text='.rawurlencode("Hi! I'd like to place a wellness order");
+    $whatsAppProductsUrl = 'https://wa.me/'.$normalizedWhatsAppNumber.'?text='.rawurlencode("Hi! I'd like to order wellness products");
+    $whatsAppBrandOrderUrl = 'https://wa.me/'.$normalizedWhatsAppNumber.'?text='.rawurlencode("Hi! I'd like to order wellness products from New Age Wellness Solutions");
+    $whatsAppEnquiryUrl = 'https://wa.me/'.$normalizedWhatsAppNumber.'?text='.rawurlencode("Hi! I'd like to enquire about wellness products");
 
     $heroImages = [
         ['src' => asset('images/hero-modern-wellness-products-banner.webp'),         'alt' => 'Premium Wellness Products Kenya — New Age Wellness Solutions'],
@@ -137,6 +178,166 @@
             50%       { box-shadow: 0 0 0 10px rgba(22,163,74,0); }
         }
         .naw-pulse { animation: nawPulse 2s infinite; }
+
+        /* ── Delivery section ── */
+        .naw-delivery-section {
+            background:
+                linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.94) 48%, rgba(239, 248, 244, 0.82) 100%),
+                radial-gradient(circle at 82% 18%, rgba(219, 234, 254, 0.72), transparent 28%),
+                linear-gradient(180deg, #f8fbf8 0%, #ffffff 100%);
+        }
+        .naw-delivery-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.58fr) minmax(0, 0.42fr);
+            gap: 1.5rem;
+            align-items: stretch;
+        }
+        .naw-delivery-container {
+            max-width: 1800px;
+        }
+        .naw-delivery-badge {
+            background: linear-gradient(180deg, #f3fbf5 0%, #e5f6e8 100%);
+            box-shadow: inset 0 0 0 1px rgba(34, 197, 94, 0.16), 0 14px 30px rgba(22, 101, 52, 0.08);
+        }
+        .naw-delivery-title {
+            font-size: clamp(3.5rem, 6vw, 7.25rem);
+            line-height: 0.94;
+            letter-spacing: 0;
+        }
+        .naw-delivery-copy {
+            font-size: clamp(1.25rem, 1.6vw, 2rem);
+        }
+        .naw-delivery-map-wrap {
+            min-height: 690px;
+        }
+        .naw-delivery-visual {
+            position: relative;
+            min-height: 690px;
+        }
+        .naw-delivery-cards {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+        .naw-delivery-card {
+            border: 1px solid rgba(22, 101, 52, 0.08);
+            box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+        }
+        .naw-delivery-city-dot {
+            box-shadow: inset 0 0 0 1px rgba(34, 197, 94, 0.12);
+        }
+        .naw-delivery-pin {
+            background: linear-gradient(180deg, #0f6c35 0%, #064e27 100%);
+            box-shadow: 0 18px 30px rgba(6, 78, 39, 0.24);
+            max-width: 10rem;
+        }
+        .naw-delivery-pin::before {
+            content: "";
+            position: absolute;
+            left: -0.95rem;
+            top: 0.95rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 9999px;
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+        }
+        .naw-delivery-pin::after {
+            content: "";
+            position: absolute;
+            left: -0.72rem;
+            top: 1.42rem;
+            width: 0.35rem;
+            height: 0.35rem;
+            border-radius: 9999px;
+            background: #16a34a;
+            box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.72);
+        }
+        .naw-delivery-arc {
+            border-color: rgba(255, 255, 255, 0.9);
+            border-style: dashed;
+        }
+        .naw-delivery-skyline {
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(226, 239, 230, 0.68) 100%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='220' viewBox='0 0 520 220'%3E%3Cg fill='%2394a3b8' fill-opacity='.18'%3E%3Crect x='20' y='118' width='28' height='88' rx='2'/%3E%3Crect x='58' y='88' width='50' height='118' rx='3'/%3E%3Crect x='122' y='132' width='36' height='74' rx='2'/%3E%3Crect x='174' y='98' width='58' height='108' rx='3'/%3E%3Crect x='246' y='74' width='40' height='132' rx='3'/%3E%3Crect x='298' y='122' width='34' height='84' rx='2'/%3E%3Crect x='346' y='44' width='62' height='162' rx='3'/%3E%3Crect x='422' y='110' width='48' height='96' rx='2'/%3E%3Crect x='478' y='138' width='24' height='68' rx='2'/%3E%3Cpath d='M377 22h4v22h-4zM365 44h28v162h-28z'/%3E%3C/g%3E%3C/svg%3E") bottom center / cover no-repeat;
+            opacity: 0.85;
+        }
+        .naw-delivery-payment-band {
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+        }
+        .naw-delivery-payment-grid {
+            display: grid;
+            grid-template-columns: minmax(280px, 1.45fr) repeat(4, minmax(130px, 1fr));
+            gap: 1.25rem;
+            align-items: center;
+        }
+        .naw-delivery-map {
+            max-width: 660px;
+        }
+        .naw-delivery-truck {
+            bottom: 0.5rem;
+            right: -1rem;
+            width: 70%;
+            min-width: 280px;
+            max-width: 600px;
+        }
+        .naw-payment-logo {
+            min-height: 5.75rem;
+            border-left: 1px solid rgba(15, 23, 42, 0.12);
+        }
+        @media (max-width: 1024px) {
+            .naw-delivery-grid {
+                grid-template-columns: 1fr;
+            }
+            .naw-delivery-cards {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+            .naw-delivery-map-wrap,
+            .naw-delivery-visual {
+                min-height: 560px;
+            }
+            .naw-delivery-payment-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .naw-delivery-payment-grid > :first-child {
+                grid-column: 1 / -1;
+            }
+        }
+        @media (max-width: 767px) {
+            .naw-delivery-cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .naw-delivery-title {
+                font-size: 2.5rem;
+            }
+            .naw-delivery-copy {
+                font-size: 1rem;
+            }
+            .naw-delivery-map-wrap,
+            .naw-delivery-visual {
+                min-height: 390px;
+            }
+            .naw-delivery-truck {
+                min-width: 220px;
+                width: 62%;
+            }
+            .naw-delivery-map-pin {
+                display: none;
+            }
+            .naw-delivery-payment-grid {
+                grid-template-columns: 1fr;
+            }
+            .naw-delivery-pin::before,
+            .naw-delivery-pin::after {
+                display: none;
+            }
+            .naw-payment-logo {
+                min-height: auto;
+                border-left: 0;
+                border-top: 1px solid rgba(15, 23, 42, 0.08);
+            }
+        }
     </style>
 @endPush
 
@@ -466,7 +667,7 @@
                             Shop the Sale
                         </a>
                         <a
-                            href="https://wa.me/254700000000?text=Hi!%20I%27d%20like%20to%20order%20wellness%20products"
+                            href="{{ $whatsAppProductsUrl }}"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="inline-flex items-center gap-2 rounded-xl bg-white/20 px-7 py-3.5 font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/30"
@@ -606,50 +807,114 @@
     {{-- ════════════════════════════════════════════════════════════════════
          SECTION 8 · DELIVERY COVERAGE
     ═════════════════════════════════════════════════════════════════════ --}}
-    <section id="delivery" class="bg-green-700 py-16 max-md:py-10 text-white" aria-labelledby="delivery-heading">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="mb-10 text-center">
-                <h2 id="delivery-heading" class="font-dmserif text-3xl font-bold max-md:text-2xl">
-                    Fast Delivery Across Kenya
-                </h2>
-                <p class="mt-2 text-green-200">We deliver wellness products to every major city and town in Kenya</p>
+    <section id="delivery" class="naw-delivery-section overflow-hidden py-16 max-md:py-10" aria-labelledby="delivery-heading">
+        <div class="naw-delivery-container mx-auto px-4 md:px-8">
+            <div class="naw-delivery-grid">
+                <div class="relative z-10">
+                    <div class="naw-delivery-badge inline-flex items-center gap-3 rounded-full px-6 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-green-800 md:text-sm">
+                        {!! $iconSvg('truck', 'h-5 w-5') !!}
+                        Fast. Reliable. Nationwide
+                    </div>
+
+                    <div class="mt-8 max-w-4xl">
+                        <h2 id="delivery-heading" class="naw-delivery-title font-dmserif font-bold text-green-950">
+                            Fast Delivery
+                            <span class="block text-green-600">Across Kenya</span>
+                        </h2>
+                        <p class="naw-delivery-copy mt-7 max-w-2xl leading-relaxed text-slate-600">
+                            We deliver wellness products to every major city and town in Kenya
+                        </p>
+                    </div>
+
+                    <div class="naw-delivery-cards mt-8">
+                        @foreach ($deliveryCities as $city)
+                            <div class="naw-delivery-card rounded-2xl bg-white p-4 md:p-5">
+                                <span class="naw-delivery-city-dot mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-50 text-green-700 md:h-16 md:w-16">
+                                    {!! $iconSvg($city[0], 'h-7 w-7 md:h-8 md:w-8') !!}
+                                </span>
+                                <p class="mt-4 text-center text-xl font-semibold text-green-950 md:text-2xl">{{ $city[1] }}</p>
+                                <div class="mt-3 flex items-start justify-center gap-2 text-slate-600">
+                                    <span class="mt-0.5 shrink-0 text-green-600">{!! $iconSvg('phone', 'h-5 w-5') !!}</span>
+                                    <p class="text-center text-sm leading-snug md:text-base">{!! $city[2] !!}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+
+                <div class="naw-delivery-map-wrap relative px-0 py-0">
+                    <div class="naw-delivery-skyline pointer-events-none absolute inset-x-[-4rem] bottom-0 h-72"></div>
+                    <div class="naw-delivery-visual">
+                        <img
+                            src="/images/kenya-map.png"
+                            alt="Kenya delivery coverage map"
+                            class="naw-delivery-map absolute inset-x-0 top-0 z-10 mx-auto w-full drop-shadow-[0_24px_45px_rgba(22,101,52,0.18)]"
+                        />
+
+                        @foreach ($deliveryPins as $pin)
+                            <div class="naw-delivery-map-pin absolute z-20 {{ $pin[2] }} {{ $pin[3] }} max-lg:scale-90 max-md:scale-75">
+                                <div class="naw-delivery-pin relative rounded-2xl px-3 py-2.5 text-white">
+                                    <p class="text-base font-semibold leading-none md:text-lg">{{ $pin[0] }}</p>
+                                    <p class="mt-1 text-xs leading-tight text-green-50 md:text-sm">{!! $pin[1] !!}</p>
+                                </div>
+                            </div>
+                        @endforeach
+
+                        <img
+                            src="/images/new-wellness-delivery-truck.png"
+                            alt="New Age Wellness delivery truck"
+                            class="naw-delivery-truck absolute z-20"
+                        />
+                    </div>
+                </div>
             </div>
 
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                @foreach ([
-                    ['city', 'Nairobi',   'Same-day &amp; next-day delivery'],
-                    ['city', 'Mombasa',   '1–2 business days'],
-                    ['city', 'Kisumu',    '2–3 business days'],
-                    ['city', 'Nakuru',    '1–2 business days'],
-                    ['city', 'Eldoret',   '2–3 business days'],
-                    ['city', 'Thika',     '1–2 business days'],
-                    ['city', 'Kiambu',    'Same-day available'],
-                    ['globe', 'All Kenya', '1–5 business days'],
-                ] as $city)
-                    <div class="flex items-center gap-3 rounded-xl bg-white/10 p-4 backdrop-blur-sm">
-                        <span class="text-green-200">{!! $iconSvg($city[0], 'h-6 w-6') !!}</span>
+            <div class="naw-delivery-payment-band mt-8 rounded-2xl border border-green-100 bg-white/95 px-6 py-6 backdrop-blur-sm">
+                <div class="naw-delivery-payment-grid">
+                    <div class="flex items-center gap-5 text-green-950">
+                        <span class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-green-50 text-green-700">
+                            {!! $iconSvg('shield-check', 'h-11 w-11') !!}
+                        </span>
                         <div>
-                            <p class="font-semibold">{{ $city[1] }}</p>
-                            <p class="text-xs text-green-200">{!! $city[2] !!}</p>
+                            <p class="text-2xl font-semibold leading-tight md:text-3xl">Secure &amp; Convenient Payment Options</p>
+                            <p class="mt-1 text-sm text-slate-500 md:hidden">M-Pesa · Visa · Mastercard · Cash on Delivery</p>
                         </div>
                     </div>
-                @endforeach
-            </div>
 
-            <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                <div class="flex items-center gap-3 rounded-xl bg-white/10 px-6 py-3">
-                    <span class="text-green-200">{!! $iconSvg('phone', 'h-5 w-5') !!}</span>
-                    <span class="font-semibold">Payment: M-Pesa · Visa · Mastercard · Cash on Delivery</span>
+                    <div class="naw-payment-logo flex flex-col items-center justify-center gap-1 text-center">
+                        <span class="text-4xl font-black tracking-normal text-green-700">M-PESA</span>
+                        <span class="text-base text-slate-600">M-Pesa</span>
+                    </div>
+                    <div class="naw-payment-logo flex flex-col items-center justify-center gap-1 text-center">
+                        <span class="text-5xl font-black italic tracking-normal text-blue-700">VISA</span>
+                        <span class="text-base text-slate-600">Visa</span>
+                    </div>
+                    <div class="naw-payment-logo flex flex-col items-center justify-center gap-1 text-center">
+                        <span class="relative h-11 w-20">
+                            <span class="absolute left-2 top-0 h-11 w-11 rounded-full bg-red-600"></span>
+                            <span class="absolute right-2 top-0 h-11 w-11 rounded-full bg-orange-400 mix-blend-multiply"></span>
+                        </span>
+                        <span class="text-base text-slate-600">Mastercard</span>
+                    </div>
+                    <div class="naw-payment-logo flex flex-col items-center justify-center gap-1 text-center">
+                        <span class="flex h-12 w-20 items-center justify-center rounded bg-green-100 text-green-700 ring-2 ring-green-600/20">
+                            {!! $iconSvg('check', 'h-8 w-8') !!}
+                        </span>
+                        <span class="text-base text-slate-600">Cash on Delivery</span>
+                    </div>
                 </div>
-                <a
-                    href="https://wa.me/254700000000?text=Hi!%20I%27d%20like%20to%20place%20a%20wellness%20order"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex items-center gap-2 rounded-xl bg-[#25d366] px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-[#1ebe5c]"
-                >
-                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    Order via WhatsApp
-                </a>
+
+                <div class="mt-5 flex justify-end">
+                    <a
+                        href="{{ $whatsAppOrderUrl }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 rounded-2xl bg-[#25d366] px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-[#1ebe5c]"
+                    >
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Order via WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -713,7 +978,7 @@
                     Shop Now
                 </a>
                 <a
-                    href="https://wa.me/254700000000?text=Hi!%20I%27d%20like%20to%20order%20wellness%20products%20from%20New%20Age%20Wellness%20Solutions"
+                    href="{{ $whatsAppBrandOrderUrl }}"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 rounded-xl bg-[#25d366] px-8 py-4 text-lg font-bold text-white shadow-lg transition-colors hover:bg-[#1ebe5c]"
@@ -727,7 +992,7 @@
 
     {{-- WhatsApp Floating Button --}}
     <a
-        href="https://wa.me/254700000000?text=Hi!%20I%27d%20like%20to%20enquire%20about%20wellness%20products"
+        href="{{ $whatsAppEnquiryUrl }}"
         target="_blank"
         rel="noopener noreferrer"
         class="naw-whatsapp-float"
