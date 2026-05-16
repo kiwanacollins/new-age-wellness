@@ -199,8 +199,13 @@
             background: linear-gradient(180deg, #f3fbf5 0%, #e5f6e8 100%);
             box-shadow: inset 0 0 0 1px rgba(34, 197, 94, 0.16), 0 14px 30px rgba(22, 101, 52, 0.08);
         }
+        .naw-hero-title {
+            font-size: clamp(2.5rem, 5vw, 5.25rem);
+            line-height: 0.94;
+            letter-spacing: 0;
+        }
         .naw-delivery-title {
-            font-size: clamp(3.5rem, 6vw, 7.25rem);
+            font-size: clamp(2.5rem, 5vw, 5.25rem);
             line-height: 0.94;
             letter-spacing: 0;
         }
@@ -366,7 +371,7 @@
             {{-- Left: Text content --}}
             <div class="z-10 flex w-full flex-col gap-6 md:w-1/2">
                 {{-- H1 --}}
-                <h1 class="font-dmserif text-4xl font-bold leading-tight text-gray-900 md:text-6xl lg:text-[7rem] md:leading-[0.94] max-md:text-3xl max-sm:text-2xl">
+                <h1 class="naw-hero-title font-dmserif font-bold text-gray-900">
                     Buy Premium Health Gadgets &amp; Wellness Products in Kenya
                 </h1>
 
