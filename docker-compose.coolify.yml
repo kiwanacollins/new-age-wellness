@@ -1,0 +1,117 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    expose:
+      - "80"
+    environment:
+      APP_NAME: ${APP_NAME:-New Age Wellness}
+      APP_ENV: ${APP_ENV:-production}
+      APP_DEBUG: ${APP_DEBUG:-false}
+      APP_URL: ${APP_URL}
+      APP_KEY: ${APP_KEY}
+      APP_ADMIN_URL: ${APP_ADMIN_URL:-admin}
+      APP_TIMEZONE: ${APP_TIMEZONE:-Africa/Kampala}
+      APP_LOCALE: ${APP_LOCALE:-en}
+      APP_FALLBACK_LOCALE: ${APP_FALLBACK_LOCALE:-en}
+      APP_CURRENCY: ${APP_CURRENCY:-KES}
+      LOG_CHANNEL: ${LOG_CHANNEL:-stack}
+      LOG_LEVEL: ${LOG_LEVEL:-warning}
+      DB_CONNECTION: ${DB_CONNECTION:-mysql}
+      DB_HOST: ${DB_HOST:-mysql}
+      DB_PORT: ${DB_PORT:-3306}
+      DB_DATABASE: ${DB_DATABASE:-bagisto}
+      DB_USERNAME: ${DB_USERNAME:-bagisto}
+      DB_PASSWORD: ${DB_PASSWORD:-bagisto}
+      SESSION_DRIVER: ${SESSION_DRIVER:-database}
+      CACHE_STORE: ${CACHE_STORE:-redis}
+      QUEUE_CONNECTION: ${QUEUE_CONNECTION:-database}
+      REDIS_HOST: ${REDIS_HOST:-redis}
+      REDIS_PORT: ${REDIS_PORT:-6379}
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-null}
+      ELASTICSEARCH_HOST: ${ELASTICSEARCH_HOST:-http://elasticsearch:9200}
+      ELASTICSEARCH_USER: ${ELASTICSEARCH_USER:-}
+      ELASTICSEARCH_PASS: ${ELASTICSEARCH_PASS:-}
+      RESPONSE_CACHE_ENABLED: ${RESPONSE_CACHE_ENABLED:-true}
+      MAIL_MAILER: ${MAIL_MAILER:-smtp}
+      MAIL_SCHEME: ${MAIL_SCHEME:-}
+      MAIL_HOST: ${MAIL_HOST:-}
+      MAIL_PORT: ${MAIL_PORT:-587}
+      MAIL_USERNAME: ${MAIL_USERNAME:-}
+      MAIL_PASSWORD: ${MAIL_PASSWORD:-}
+      MAIL_FROM_ADDRESS: ${MAIL_FROM_ADDRESS:-shop@example.com}
+      MAIL_FROM_NAME: ${MAIL_FROM_NAME:-Shop}
+      ADMIN_MAIL_ADDRESS: ${ADMIN_MAIL_ADDRESS:-admin@example.com}
+      ADMIN_MAIL_NAME: ${ADMIN_MAIL_NAME:-Admin}
+      CONTACT_MAIL_ADDRESS: ${CONTACT_MAIL_ADDRESS:-contact@example.com}
+      CONTACT_MAIL_NAME: ${CONTACT_MAIL_NAME:-Contact}
+      APP_AUTO_MIGRATE: ${APP_AUTO_MIGRATE:-true}
+      APP_RUN_OPTIMIZE: ${APP_RUN_OPTIMIZE:-true}
+      APP_RUN_INDEXERS: ${APP_RUN_INDEXERS:-false}
+      ENABLE_QUEUE_WORKER: ${ENABLE_QUEUE_WORKER:-true}
+      ENABLE_SCHEDULER: ${ENABLE_SCHEDULER:-true}
+      QUEUE_WORKER_QUEUES: ${QUEUE_WORKER_QUEUES:-default,broadcastable}
+      QUEUE_WORKER_SLEEP: ${QUEUE_WORKER_SLEEP:-3}
+      QUEUE_WORKER_TRIES: ${QUEUE_WORKER_TRIES:-3}
+      QUEUE_WORKER_TIMEOUT: ${QUEUE_WORKER_TIMEOUT:-120}
+      QUEUE_WORKER_MAX_TIME: ${QUEUE_WORKER_MAX_TIME:-3600}
+      AUTO_GENERATE_APP_KEY: ${AUTO_GENERATE_APP_KEY:-false}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      elasticsearch:
+        condition: service_started
+    volumes:
+      - app-storage:/var/www/html/storage
+
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-bagisto}
+      MYSQL_USER: ${DB_USERNAME:-bagisto}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-bagisto}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-p${DB_ROOT_PASSWORD:-root}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.24
+    restart: unless-stopped
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      bootstrap.memory_lock: "true"
+      ES_JAVA_OPTS: ${ES_JAVA_OPTS:--Xms512m -Xmx512m}
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+
+volumes:
+  app-storage:
+  mysql-data:
+  redis-data:
+  elasticsearch-data:
