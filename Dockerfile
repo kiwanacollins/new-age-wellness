@@ -1,5 +1,9 @@
 FROM node:22-bookworm-slim AS assets
 
+ENV NPM_CONFIG_FETCH_RETRIES=5 \
+    NPM_CONFIG_FETCH_RETRY_MINTIMEOUT=2000 \
+    NPM_CONFIG_FETCH_RETRY_MAXTIMEOUT=20000
+
 WORKDIR /app
 
 COPY package*.json vite.config.js ./
@@ -19,9 +23,48 @@ RUN --mount=type=cache,target=/root/.npm \
         done; \
         [ "$attempts" -lt 3 ]; \
     }; \
-    retry_npm npm install --no-fund --no-audit; \
-    cd /app/packages/Webkul/Shop && retry_npm npm ci --no-fund --no-audit; \
-    cd /app/packages/Webkul/Admin && retry_npm npm ci --no-fund --no-audit; \
+    retry_npm npm install --no-fund --no-audit
+
+RUN --mount=type=cache,target=/root/.npm \
+    set -eux; \
+    retry_npm() { \
+        attempts=0; \
+        until [ "$attempts" -ge 3 ]; do \
+            "$@" && break; \
+            attempts=$((attempts + 1)); \
+            echo "npm command failed (attempt ${attempts}), retrying in 5 seconds..." >&2; \
+            sleep 5; \
+        done; \
+        [ "$attempts" -lt 3 ]; \
+    }; \
+    cd /app/packages/Webkul/Shop && retry_npm npm ci --no-fund --no-audit
+
+RUN --mount=type=cache,target=/root/.npm \
+    set -eux; \
+    retry_npm() { \
+        attempts=0; \
+        until [ "$attempts" -ge 3 ]; do \
+            "$@" && break; \
+            attempts=$((attempts + 1)); \
+            echo "npm command failed (attempt ${attempts}), retrying in 5 seconds..." >&2; \
+            sleep 5; \
+        done; \
+        [ "$attempts" -lt 3 ]; \
+    }; \
+    cd /app/packages/Webkul/Admin && retry_npm npm ci --no-fund --no-audit
+
+RUN --mount=type=cache,target=/root/.npm \
+    set -eux; \
+    retry_npm() { \
+        attempts=0; \
+        until [ "$attempts" -ge 3 ]; do \
+            "$@" && break; \
+            attempts=$((attempts + 1)); \
+            echo "npm command failed (attempt ${attempts}), retrying in 5 seconds..." >&2; \
+            sleep 5; \
+        done; \
+        [ "$attempts" -lt 3 ]; \
+    }; \
     cd /app/packages/Webkul/Installer && retry_npm npm install --no-fund --no-audit
 
 COPY . .
