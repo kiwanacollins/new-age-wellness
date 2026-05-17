@@ -87,13 +87,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         ca-certificates \
         curl \
         git \
-        imagemagick \
         libcurl4-openssl-dev \
         libfreetype6-dev \
         libgmp-dev \
         libicu-dev \
         libjpeg62-turbo-dev \
-        libmagickwand-dev \
         libonig-dev \
         libpng-dev \
         libwebp-dev \
@@ -104,7 +102,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         supervisor \
         unzip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
-    && docker-php-ext-install -j"$(nproc)" \
+    && docker-php-ext-install -j1 \
         bcmath \
         calendar \
         curl \
@@ -120,11 +118,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         soap \
         sockets \
         zip \
-    && pecl install imagick \
-    && pecl install redis-6.2.0 \
-    && docker-php-ext-enable imagick \
-    && docker-php-ext-enable redis \
     && rm -rf /var/lib/apt/lists/*
+
+RUN set -eux; \
+    attempts=0; \
+    until [ "$attempts" -ge 3 ]; do \
+        pecl install redis-6.2.0 && break; \
+        attempts=$((attempts + 1)); \
+        echo "PECL redis install failed (attempt ${attempts}), retrying in 10 seconds..." >&2; \
+        sleep 10; \
+    done; \
+    [ "$attempts" -lt 3 ]; \
+    docker-php-ext-enable redis; \
+    rm -rf /tmp/pear ~/.pearrc
 
 COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 
