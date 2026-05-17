@@ -7,10 +7,22 @@ COPY packages/Webkul/Shop/package*.json packages/Webkul/Shop/vite.config.js ./pa
 COPY packages/Webkul/Admin/package*.json packages/Webkul/Admin/vite.config.js ./packages/Webkul/Admin/
 COPY packages/Webkul/Installer/package*.json packages/Webkul/Installer/vite.config.js ./packages/Webkul/Installer/
 
-RUN npm install --no-fund --no-audit \
-    && cd packages/Webkul/Shop && npm ci \
-    && cd /app/packages/Webkul/Admin && npm ci \
-    && cd /app/packages/Webkul/Installer && npm install --no-fund --no-audit
+RUN --mount=type=cache,target=/root/.npm \
+    set -eux; \
+    retry_npm() { \
+        attempts=0; \
+        until [ "$attempts" -ge 3 ]; do \
+            "$@" && break; \
+            attempts=$((attempts + 1)); \
+            echo "npm command failed (attempt ${attempts}), retrying in 5 seconds..." >&2; \
+            sleep 5; \
+        done; \
+        [ "$attempts" -lt 3 ]; \
+    }; \
+    retry_npm npm install --no-fund --no-audit; \
+    cd /app/packages/Webkul/Shop && retry_npm npm ci --no-fund --no-audit; \
+    cd /app/packages/Webkul/Admin && retry_npm npm ci --no-fund --no-audit; \
+    cd /app/packages/Webkul/Installer && retry_npm npm install --no-fund --no-audit
 
 COPY . .
 
