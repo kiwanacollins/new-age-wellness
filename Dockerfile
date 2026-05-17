@@ -37,7 +37,7 @@ RUN --mount=type=cache,target=/root/.npm \
         done; \
         [ "$attempts" -lt 3 ]; \
     }; \
-    cd /app/packages/Webkul/Shop && retry_npm npm ci --no-fund --no-audit
+    cd /app/packages/Webkul/Shop && retry_npm npm install --no-fund --no-audit
 
 RUN --mount=type=cache,target=/root/.npm \
     set -eux; \
