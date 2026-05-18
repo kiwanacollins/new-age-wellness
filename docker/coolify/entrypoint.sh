@@ -92,6 +92,16 @@ if [[ -z "${APP_KEY:-}" && -z "${existing_app_key}" ]]; then
     fi
 fi
 
+# If APP_KEY env var is empty but .env has a key (e.g. auto-generated above),
+# export it so that config:cache picks up the .env value instead of the empty env var.
+if [[ -z "${APP_KEY:-}" ]]; then
+    _dotenv_key="$(sed -n 's/^APP_KEY=//p' .env | head -n 1)"
+    if [[ -n "${_dotenv_key}" ]]; then
+        log "Exporting APP_KEY from .env so config cache uses the correct key."
+        export APP_KEY="${_dotenv_key}"
+    fi
+fi
+
 wait_for_mysql
 wait_for_redis || true
 wait_for_elasticsearch || true
