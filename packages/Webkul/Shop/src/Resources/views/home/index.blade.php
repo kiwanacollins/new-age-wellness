@@ -210,6 +210,34 @@
             pointer-events: none;
         }
 
+        /* ── Why choose us ── */
+        .naw-why-section {
+            position: relative;
+            overflow: hidden;
+            background: #f8fafc;
+        }
+        .naw-why-grid-fade {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-image:
+                linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+                linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+            background-size: 20px 30px;
+            -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%);
+            mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%);
+            pointer-events: none;
+        }
+        .naw-why-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(3px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+        }
+        .naw-why-icon {
+            box-shadow: inset 0 0 0 1px rgba(22, 163, 74, 0.08);
+        }
+
         /* ── Delivery section ── */
         .naw-delivery-section {
             background:
@@ -643,8 +671,10 @@
     {{-- ════════════════════════════════════════════════════════════════════
          SECTION 5 · WHY CHOOSE US
     ═════════════════════════════════════════════════════════════════════ --}}
-    <section id="why-choose-us" class="bg-white py-16 max-md:py-10" aria-labelledby="why-us-heading">
-        <div class="container mx-auto px-4 md:px-8">
+    <section id="why-choose-us" class="naw-why-section py-16 max-md:py-10" aria-labelledby="why-us-heading">
+        <div class="naw-why-grid-fade"></div>
+
+        <div class="container relative z-10 mx-auto px-4 md:px-8">
             <div class="mb-10 text-center">
                 <h2 id="why-us-heading" class="font-dmserif text-3xl font-bold text-gray-900 max-md:text-2xl">
                     Why Kenyans Trust New Age Wellness Solutions
@@ -660,8 +690,8 @@
                     ['award', 'Trusted Wellness Store',         'Focused on quality, comfort, and modern health solutions for Kenyan households.'],
                     ['reply', 'Hassle-free Returns',           'Not satisfied? We offer easy returns and exchanges so you can shop with complete confidence.'],
                 ] as $why)
-                    <div class="flex gap-4 rounded-2xl bg-gray-50 p-5 shadow-sm ring-1 ring-gray-100">
-                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-100 text-green-700">{!! $iconSvg($why[0], 'h-6 w-6') !!}</span>
+                    <div class="naw-why-card flex gap-4 rounded-2xl p-5">
+                        <span class="naw-why-icon flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-100 text-green-700">{!! $iconSvg($why[0], 'h-6 w-6') !!}</span>
                         <div>
                             <h3 class="font-semibold text-gray-900">{{ $why[1] }}</h3>
                             <p class="mt-1 text-sm text-gray-600">{!! $why[2] !!}</p>
@@ -722,8 +752,10 @@
     {{-- ════════════════════════════════════════════════════════════════════
          SECTION 6 · EDUCATIONAL / BLOG SECTION
     ═════════════════════════════════════════════════════════════════════ --}}
-    <section id="wellness-tips" class="bg-gray-50 py-16 max-md:py-10" aria-labelledby="blog-heading">
-        <div class="container mx-auto px-4 md:px-8">
+    <section id="wellness-tips" class="naw-why-section py-16 max-md:py-10" aria-labelledby="blog-heading">
+        <div class="naw-why-grid-fade"></div>
+
+        <div class="container relative z-10 mx-auto px-4 md:px-8">
             <div class="mb-10 text-center">
                 <h2 id="blog-heading" class="font-dmserif text-3xl font-bold text-gray-900 max-md:text-2xl">
                     Wellness Tips &amp; Health Guides
@@ -740,8 +772,8 @@
                     ['stethoscope', 'Top Pain Relief Devices in Kenya',                     'Explore the most effective pain relief gadgets available online in Kenya, reviewed by our wellness team.'],
                     ['home', 'Home Wellness Gadgets Every Family Should Have',        'Build a healthier home with these essential wellness devices for families across Kenya.'],
                 ] as $i => $blog)
-                    <article class="flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-100 transition-shadow hover:shadow-md">
-                        <span class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-50 text-green-700">{!! $iconSvg($blog[0], 'h-5 w-5') !!}</span>
+                    <article class="naw-why-card flex flex-col rounded-2xl p-6 transition-shadow hover:shadow-md">
+                        <span class="naw-why-icon mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-50 text-green-700">{!! $iconSvg($blog[0], 'h-5 w-5') !!}</span>
                         <h3 class="font-semibold text-gray-900 leading-snug">{{ $blog[1] }}</h3>
                         <p class="mt-2 text-sm text-gray-600 leading-relaxed">{{ $blog[2] }}</p>
                         <a
