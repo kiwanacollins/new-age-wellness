@@ -36,7 +36,7 @@
                             />
                         @else
                             <img
-                                src="{{ bagisto_asset('images/logo.svg', 'shop') }}"
+                                src="{{ asset('new-age-wellness-solutions-nobg.png') }}"
                                 alt="{{ config('app.name') }}"
                                 width="131"
                                 height="29"

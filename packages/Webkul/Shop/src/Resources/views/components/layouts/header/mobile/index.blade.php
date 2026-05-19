@@ -28,7 +28,7 @@
             >
                 <img
                     class="block"
-                    src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
+                    src="{{ core()->getCurrentChannel()->logo_url ?? asset('new-age-wellness-solutions-nobg.png') }}"
                     alt="{{ config('app.name') }}"
                     width="131"
                     height="29"
@@ -245,7 +245,7 @@
                     <div class="flex items-center justify-between">
                         <a href="{{ route('shop.home.index') }}">
                             <img
-                                src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
+                                src="{{ core()->getCurrentChannel()->logo_url ?? asset('new-age-wellness-solutions-nobg.png') }}"
                                 alt="{{ config('app.name') }}"
                                 width="131"
                                 height="29"
