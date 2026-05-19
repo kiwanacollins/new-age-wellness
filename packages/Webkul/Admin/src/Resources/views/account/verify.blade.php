@@ -13,8 +13,8 @@
                 />
             @else
                 <img 
-                    class="w-max" 
-                    src="{{ bagisto_asset('images/logo.svg') }}" 
+                    class="h-14 w-auto" 
+                    src="{{ asset('new-age-wellness-solutions-nobg.png') }}" 
                     alt="{{ config('app.name') }}" 
                 />
             @endif
