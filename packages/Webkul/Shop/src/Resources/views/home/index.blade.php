@@ -179,6 +179,37 @@
         }
         .naw-pulse { animation: nawPulse 2s infinite; }
 
+        /* ── Final CTA ── */
+        .naw-final-cta {
+            position: relative;
+            overflow: hidden;
+            background-color: #16924a;
+            background-image:
+                radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.08) 0, rgba(255, 255, 255, 0.08) 3px, transparent 3px),
+                radial-gradient(circle at 78% 72%, rgba(255, 255, 255, 0.07) 0, rgba(255, 255, 255, 0.07) 4px, transparent 4px);
+            background-size: 220px 220px, 260px 260px;
+        }
+        .naw-final-cta::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.16;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M50 52c16 0 27 12 27 29v12c0 10 8 18 18 18h12'/%3E%3Cpath d='M106 111h16l8-16 16 32 9-18h17'/%3E%3Cpath d='M206 60c-6 0-11 2-14 7-3-5-8-7-14-7-11 0-19 8-19 19 0 23 33 39 33 39s33-16 33-39c0-11-8-19-19-19Z'/%3E%3Cpath d='M52 187c33-24 55-23 78 0'/%3E%3Cpath d='M82 159c0 16-13 29-29 29 0-16 13-29 29-29Z'/%3E%3Cpath d='M181 161v22a12 12 0 0 1-24 0v-22'/%3E%3Ccircle cx='211' cy='179' r='10'/%3E%3Cpath d='M211 189v13a16 16 0 0 1-16 16h-14'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 260px 260px;
+            background-position: center;
+            mix-blend-mode: soft-light;
+            pointer-events: none;
+        }
+        .naw-final-cta::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)),
+                linear-gradient(90deg, rgba(7, 94, 44, 0.16), rgba(7, 94, 44, 0.04));
+            pointer-events: none;
+        }
+
         /* ── Delivery section ── */
         .naw-delivery-section {
             background:
@@ -1014,8 +1045,8 @@
     {{-- ════════════════════════════════════════════════════════════════════
          SECTION 10 · FINAL CTA
     ═════════════════════════════════════════════════════════════════════ --}}
-    <section id="final-cta" class="bg-gradient-to-br from-green-600 to-emerald-700 py-16 max-md:py-10 text-white" aria-labelledby="cta-heading">
-        <div class="container mx-auto px-4 text-center md:px-8">
+    <section id="final-cta" class="naw-final-cta py-16 text-white max-md:py-10" aria-labelledby="cta-heading">
+        <div class="container relative z-10 mx-auto px-4 text-center md:px-8">
             <h2 id="cta-heading" class="font-dmserif text-4xl font-bold max-md:text-2xl">
                 Start Your Wellness Journey Today
             </h2>
