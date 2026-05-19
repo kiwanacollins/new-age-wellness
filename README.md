@@ -186,3 +186,5 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 
 
 http://127.0.0.1:8000
+
+php artisan optimize:clear
