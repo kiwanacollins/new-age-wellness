@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'පිටුවේ අන්තර්ගතය',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'පිටු මාධ්‍ය',
-                'newsletter-text' => 'අපේ සෙවුම් පනසලේ සම්බන්ධවන්ද බලන්න!',
+                'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'ඇණවුම් හා ආපසු සපිරව්ව',
                 'payment-policy' => 'ගෙවීම් ප්‍රතිඵල',
                 'privacy-cookies-policy' => 'පෞද්ගලිකතා සහ කුකී පොලීසි',

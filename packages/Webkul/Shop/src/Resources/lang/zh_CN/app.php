@@ -611,7 +611,7 @@ return [
                 'footer-content' => '页脚内容',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => '语言',
-                'newsletter-text' => '准备好我们有趣的新闻通讯！',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => '订单和退货',
                 'payment-policy' => '付款政策',
                 'privacy-cookies-policy' => '隐私和 Cookie 政策',

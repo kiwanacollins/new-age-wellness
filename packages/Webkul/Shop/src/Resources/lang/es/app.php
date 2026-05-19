@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Contenido del pie de página',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Idioma',
-                'newsletter-text' => '¡Prepárate para nuestro divertido boletín!',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Pedido y devolución',
                 'payment-policy' => 'Política de pagos',
                 'privacy-cookies-policy' => 'Política de privacidad y cookies',

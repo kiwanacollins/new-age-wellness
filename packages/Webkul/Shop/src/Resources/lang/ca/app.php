@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Contingut del peu de pàgina',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Idioma',
-                'newsletter-text' => 'Prepara’t per al nostre divertit butlletí!',
+                'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Comandes i devolucions',
                 'payment-policy' => 'Política de pagaments',
                 'privacy-cookies-policy' => 'Política de privadesa i cookies',

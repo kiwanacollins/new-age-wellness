@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'محتوى التذييل',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'اللغة',
-                'newsletter-text' => 'احصل على نشرتنا الممتعة!',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'الطلب والمرتجعات',
                 'payment-policy' => 'سياسة الدفع',
                 'privacy-cookies-policy' => 'سياسة الخصوصية وملفات تعريف الارتباط',

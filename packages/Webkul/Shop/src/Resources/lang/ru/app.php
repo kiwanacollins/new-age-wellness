@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Содержимое футера',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Язык',
-                'newsletter-text' => 'Подготовьтесь к нашей интересной рассылке!',
+                'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Заказ и возврат',
                 'payment-policy' => 'Политика оплаты',
                 'privacy-cookies-policy' => 'Политика конфиденциальности и файлов cookie',

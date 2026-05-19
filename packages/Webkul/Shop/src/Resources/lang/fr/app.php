@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Contenu du pied de page',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Langue',
-                'newsletter-text' => 'Préparez-vous pour notre newsletter amusante !',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Commande et retours',
                 'payment-policy' => 'Politique de paiement',
                 'privacy-cookies-policy' => 'Politique de confidentialité et de cookies',

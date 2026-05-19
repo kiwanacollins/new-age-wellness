@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Konten Footer',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Bahasa',
-                'newsletter-text' => 'Bersiaplah untuk Newsletter Seru Kami!',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Pesanan dan Pengembalian',
                 'payment-policy' => 'Kebijakan Pembayaran',
                 'privacy-cookies-policy' => 'Kebijakan Privasi & Cookie',

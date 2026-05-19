@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'फ़ुटर सामग्री',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'स्थान',
-                'newsletter-text' => 'हमारे मनोरंजन समाचार पत्रिका के लिए तैयार हो जाओ!',
+                'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'आर्डर और रिटर्न',
                 'payment-policy' => 'भुगतान नीति',
                 'privacy-cookies-policy' => 'गोपनीयता और कुकीज़ नीति',

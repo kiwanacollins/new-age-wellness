@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Footer Content',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Locale',
-                'newsletter-text' => 'Get Ready for our Fun Newsletter!',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Order and Returns',
                 'payment-policy' => 'Payment Policy',
                 'privacy-cookies-policy' => 'Privacy and Cookies Policy',

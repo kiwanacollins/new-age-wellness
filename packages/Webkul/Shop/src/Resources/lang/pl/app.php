@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Treść stopki',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Lokalizacja',
-                'newsletter-text' => 'Bądź gotów na nasz zabawny biuletyn!',
+                'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Zamówienia i zwroty',
                 'payment-policy' => 'Polityka płatności',
                 'privacy-cookies-policy' => 'Polityka prywatności i plików cookie',

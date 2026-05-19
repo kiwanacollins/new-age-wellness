@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Вміст нижнього колонтитула',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Мова',
-                'newsletter-text' => 'Готуйтеся до наших цікавих новин!',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Замовлення та повернення',
                 'payment-policy' => 'Політика оплати',
                 'privacy-cookies-policy' => 'Політика конфіденційності та файлів cookie',

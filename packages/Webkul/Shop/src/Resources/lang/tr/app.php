@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Alt Bilgi İçeriği',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Dil',
-                'newsletter-text' => 'Bültenimize abone olun, fırsatları kaçırmayın!',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Sipariş ve İade',
                 'payment-policy' => 'Ödeme Politikası',
                 'privacy-cookies-policy' => 'Gizlilik ve Çerez Politikası',

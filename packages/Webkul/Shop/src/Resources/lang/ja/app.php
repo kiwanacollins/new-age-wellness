@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'フッターコンテンツ',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'ロケール',
-                'newsletter-text' => '楽しいニュースレターの準備をしてください！',
+                'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => '注文と返品',
                 'payment-policy' => '支払いポリシー',
                 'privacy-cookies-policy' => 'プライバシーとクッキーポリシー',

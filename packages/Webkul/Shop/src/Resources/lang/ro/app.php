@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Conținut subsol',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Limbă',
-                'newsletter-text' => 'Pregătiți-vă pentru newsletter-ul nostru distractiv!',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Comenzi și retururi',
                 'payment-policy' => 'Politica de plată',
                 'privacy-cookies-policy' => 'Politica de confidențialitate și cookie-uri',

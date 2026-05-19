@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'محتوای فوتر',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'زبان و محل',
-                'newsletter-text' => 'برای دریافت خبرنامه‌ی جذاب ما آماده شوید!',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'سفارش و بازگشت',
                 'payment-policy' => 'سیاست پرداخت',
                 'privacy-cookies-policy' => 'سیاست حریم خصوصی و کوکی‌ها',

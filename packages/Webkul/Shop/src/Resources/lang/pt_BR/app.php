@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Conteúdo do Rodapé',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Localização',
-                'newsletter-text' => 'Prepare-se para nossa Newsletter divertida!',
+                'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Pedido e Devoluções',
                 'payment-policy' => 'Política de Pagamento',
                 'privacy-cookies-policy' => 'Política de Privacidade e Cookies',

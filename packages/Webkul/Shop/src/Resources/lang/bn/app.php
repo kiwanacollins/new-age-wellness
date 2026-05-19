@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'ফুটারের সামগ্রী',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'লোকেল',
-                'newsletter-text' => 'আমাদের মজাদার নিউজলেটারের জন্য প্রস্তুত থাকুন!',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'অর্ডার এবং রিটার্ন',
                 'payment-policy' => 'পেমেন্ট নীতি',
                 'privacy-cookies-policy' => 'গোপনীয়তা এবং কুকিজ নীতি',

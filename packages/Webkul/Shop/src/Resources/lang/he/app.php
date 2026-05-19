@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'תוכן תחתית הדף',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'אזור',
-                'newsletter-text' => 'הכנסו לרשימת התפוצה שלנו וקבלו עדכונים והצעות מרשימות!',
+                'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'הזמנה והחזרה',
                 'payment-policy' => 'מדיניות תשלום',
                 'privacy-cookies-policy' => 'מדיניות פרטיות ועוגיות',

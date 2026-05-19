@@ -611,7 +611,7 @@ return [
                 'footer-content' => 'Voettekst inhoud',
                 'footer-text' => '© Copyright :current_year. All rights reserved.',
                 'locale' => 'Taal',
-                'newsletter-text' => 'Maak je klaar voor onze leuke nieuwsbrief!',
+                'newsletter-text' => 'Subscribe for health updates, wellness tips, and exclusive offers.',
                 'order-return' => 'Bestelling en Retourneren',
                 'payment-policy' => 'Betalingsbeleid',
                 'privacy-cookies-policy' => 'Privacy- en cookiebeleid',
