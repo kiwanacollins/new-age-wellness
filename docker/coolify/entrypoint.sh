@@ -121,6 +121,7 @@ fi
 if [[ "${APP_RUN_OPTIMIZE:-true}" == "true" ]]; then
     log "Refreshing framework caches..."
     php artisan optimize:clear --no-interaction || true
+    php artisan responsecache:clear --no-interaction || true
     php artisan optimize --no-interaction
 fi
 
