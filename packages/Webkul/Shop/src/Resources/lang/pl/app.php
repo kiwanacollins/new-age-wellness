@@ -609,7 +609,7 @@ return [
                 'customer-service' => 'Obsługa klienta',
                 'email' => 'Email',
                 'footer-content' => 'Treść stopki',
-                'footer-text' => '© Prawa autorskie 2010 - :current_year, Webkul Software (zarejestrowane w Indiach). Wszelkie prawa zastrzeżone.',
+                'footer-text' => '© Copyright 2010 - :current_year. All rights reserved.',
                 'locale' => 'Lokalizacja',
                 'newsletter-text' => 'Bądź gotów na nasz zabawny biuletyn!',
                 'order-return' => 'Zamówienia i zwroty',

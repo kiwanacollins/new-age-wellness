@@ -609,7 +609,7 @@ return [
                 'customer-service' => 'Atendimento ao Cliente',
                 'email' => 'Email',
                 'footer-content' => 'Conteúdo do Rodapé',
-                'footer-text' => '© Direitos autorais 2010 - :current_year, Webkul Software (registrado na Índia). Todos os direitos reservados.',
+                'footer-text' => '© Copyright 2010 - :current_year. All rights reserved.',
                 'locale' => 'Localização',
                 'newsletter-text' => 'Prepare-se para nossa Newsletter divertida!',
                 'order-return' => 'Pedido e Devoluções',

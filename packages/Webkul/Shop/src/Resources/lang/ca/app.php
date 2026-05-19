@@ -609,7 +609,7 @@ return [
                 'customer-service' => 'Atenció al client',
                 'email' => 'Correu electrònic',
                 'footer-content' => 'Contingut del peu de pàgina',
-                'footer-text' => '© Copyright 2010 - :current_year, Webkul Software (registrada a l’Índia). Tots els drets reservats.',
+                'footer-text' => '© Copyright 2010 - :current_year. All rights reserved.',
                 'locale' => 'Idioma',
                 'newsletter-text' => 'Prepara’t per al nostre divertit butlletí!',
                 'order-return' => 'Comandes i devolucions',

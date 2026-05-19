@@ -140,13 +140,27 @@
     <div class="flex justify-between bg-[#F1EADF] px-[60px] py-3.5 max-md:justify-center max-sm:px-5">
         {!! view_render_event('bagisto.shop.layout.footer.footer_text.before') !!}
 
-        <p class="text-sm text-zinc-600 max-md:text-center">
-            @if (core()->getConfigData('general.content.footer.copyright_content'))
-                {!! core()->getConfigData('general.content.footer.copyright_content') !!}
-            @else
-                @lang('shop::app.components.layouts.footer.footer-text', ['current_year'=> date('Y') ])
-            @endif
-        </p>
+        <div class="flex flex-col gap-1 text-sm text-zinc-600 max-md:text-center">
+            <p>
+                @if (core()->getConfigData('general.content.footer.copyright_content'))
+                    {!! core()->getConfigData('general.content.footer.copyright_content') !!}
+                @else
+                    @lang('shop::app.components.layouts.footer.footer-text', ['current_year'=> date('Y') ])
+                @endif
+            </p>
+
+            <p>
+                Powered by
+                <a
+                    href="https://kicowebdesign.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-medium text-zinc-700 transition hover:text-zinc-900 hover:underline"
+                >
+                    Kico Web Design
+                </a>
+            </p>
+        </div>
 
         {!! view_render_event('bagisto.shop.layout.footer.footer_text.after') !!}
     </div>

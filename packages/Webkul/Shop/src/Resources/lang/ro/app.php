@@ -609,7 +609,7 @@ return [
                 'customer-service' => 'Serviciu clienți',
                 'email' => 'E-mail',
                 'footer-content' => 'Conținut subsol',
-                'footer-text' => '© Drepturi de autor 2010 - :current_year, Webkul Software (Înregistrat în India). Toate drepturile rezervate.',
+                'footer-text' => '© Copyright 2010 - :current_year. All rights reserved.',
                 'locale' => 'Limbă',
                 'newsletter-text' => 'Pregătiți-vă pentru newsletter-ul nostru distractiv!',
                 'order-return' => 'Comenzi și retururi',
