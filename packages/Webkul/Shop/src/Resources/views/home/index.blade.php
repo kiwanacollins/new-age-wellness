@@ -60,7 +60,7 @@
         ['Mombasa', '1–2 days', 'top-[86%]', 'left-[78%]'],
     ];
 
-    $contactNumber = core()->getConfigData('sales.shipping.origin.contact') ?: '254700000000';
+    $contactNumber = core()->getConfigData('sales.shipping.origin.contact') ?: '254795020334';
     $normalizedWhatsAppNumber = preg_replace('/\D+/', '', $contactNumber);
 
     if (preg_match('/^(?:0|254)?(7\d{8}|1\d{8})$/', $normalizedWhatsAppNumber, $matches)) {
