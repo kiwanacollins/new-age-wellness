@@ -598,18 +598,6 @@
                 @endforeach
             </div>
 
-            {{-- Categories banner image --}}
-            <div class="mt-10 overflow-hidden rounded-2xl shadow-md">
-                <img
-                    src="{{ asset('images/homepage-wellness-product-categories-banner.webp') }}"
-                    alt="Shop Wellness Solutions by Category — New Age Wellness Solutions Kenya"
-                    class="h-auto w-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                    width="1717"
-                    height="916"
-                />
-            </div>
         </div>
     </section>
 
