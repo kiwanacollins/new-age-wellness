@@ -579,12 +579,12 @@
 
             <div class="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
                 @foreach ([
-                    ['icon' => 'activity', 'title' => 'Health Gadgets',            'kw' => 'health gadgets Kenya',        'href' => route('shop.search.index', ['query' => 'health gadgets']), 'color' => 'bg-blue-50 border-blue-100'],
-                    ['icon' => 'lungs', 'title' => 'Oxygen &amp; Breathing',      'kw' => 'oxygen devices Kenya',        'href' => route('shop.search.index', ['query' => 'oxygen']),         'color' => 'bg-sky-50 border-sky-100'],
-                    ['icon' => 'stethoscope', 'title' => 'Pain Relief &amp; Recovery',  'kw' => 'pain relief gadgets Kenya',   'href' => route('shop.search.index', ['query' => 'pain relief']),    'color' => 'bg-red-50 border-red-100'],
-                    ['icon' => 'refresh', 'title' => 'Blood Circulation',           'kw' => 'blood circulation Kenya',     'href' => route('shop.search.index', ['query' => 'circulation']),    'color' => 'bg-pink-50 border-pink-100'],
-                    ['icon' => 'home', 'title' => 'Home Healthcare',             'kw' => 'home healthcare Kenya',       'href' => route('shop.search.index', ['query' => 'home healthcare']), 'color' => 'bg-emerald-50 border-emerald-100'],
-                    ['icon' => 'bolt', 'title' => 'Energy &amp; Supplements',    'kw' => 'wellness supplements Kenya',  'href' => route('shop.search.index', ['query' => 'supplements']),    'color' => 'bg-amber-50 border-amber-100'],
+                    ['icon' => 'activity',    'title' => 'Health Gadgets',                        'kw' => 'health gadgets Kenya',            'href' => url('/health-gadgets-kenya'),                      'color' => 'bg-blue-50 border-blue-100'],
+                    ['icon' => 'lungs',       'title' => 'Oxygen &amp; Breathing',                'kw' => 'oxygen devices Kenya',            'href' => url('/oxygen-devices-kenya'),                      'color' => 'bg-sky-50 border-sky-100'],
+                    ['icon' => 'stethoscope', 'title' => 'Pain Relief &amp; Recovery',            'kw' => 'pain relief gadgets Kenya',       'href' => url('/pain-relief-recovery-products-kenya'),       'color' => 'bg-red-50 border-red-100'],
+                    ['icon' => 'refresh',     'title' => 'Foot Massagers &amp; Circulation',      'kw' => 'blood circulation Kenya',         'href' => url('/foot-massagers-circulation-devices-kenya'),  'color' => 'bg-pink-50 border-pink-100'],
+                    ['icon' => 'home',        'title' => 'Home Wellness Solutions',               'kw' => 'home healthcare Kenya',           'href' => url('/home-wellness-solutions-kenya'),             'color' => 'bg-emerald-50 border-emerald-100'],
+                    ['icon' => 'bolt',        'title' => 'Energy &amp; Supplements',              'kw' => 'wellness supplements Kenya',      'href' => url('/wellness-supplements-kenya'),                'color' => 'bg-amber-50 border-amber-100'],
                 ] as $cat)
                     <a
                         href="{{ $cat['href'] }}"
@@ -636,12 +636,12 @@
 
             <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
                 @foreach ([
-                    ['icon' => 'moon', 'title' => 'Better Sleep',         'href' => route('shop.search.index', ['query' => 'sleep wellness'])],
-                    ['icon' => 'stethoscope', 'title' => 'Pain Relief',          'href' => route('shop.search.index', ['query' => 'pain relief'])],
-                    ['icon' => 'refresh', 'title' => 'Improved Circulation', 'href' => route('shop.search.index', ['query' => 'blood circulation'])],
-                    ['icon' => 'run', 'title' => 'Recovery &amp; Relaxation', 'href' => route('shop.search.index', ['query' => 'recovery'])],
-                    ['icon' => 'bolt', 'title' => 'Energy &amp; Vitality', 'href' => route('shop.search.index', ['query' => 'energy vitality'])],
-                    ['icon' => 'user', 'title' => 'Elderly Care',         'href' => route('shop.search.index', ['query' => 'elderly care'])],
+                    ['icon' => 'moon',        'title' => 'Better Sleep',             'href' => url('/wellness-supplements-kenya')],
+                    ['icon' => 'stethoscope', 'title' => 'Pain Relief',              'href' => url('/pain-relief-recovery-products-kenya')],
+                    ['icon' => 'refresh',     'title' => 'Improved Circulation',     'href' => url('/foot-massagers-circulation-devices-kenya')],
+                    ['icon' => 'run',         'title' => 'Recovery &amp; Relaxation','href' => url('/pain-relief-recovery-products-kenya')],
+                    ['icon' => 'bolt',        'title' => 'Energy &amp; Vitality',    'href' => url('/energy-vitality-products-kenya')],
+                    ['icon' => 'user',        'title' => 'Elderly Care',             'href' => url('/home-wellness-solutions-kenya')],
                 ] as $goal)
                     <a
                         href="{{ $goal['href'] }}"
