@@ -622,39 +622,6 @@
         />
     </section>
 
-    {{-- ════════════════════════════════════════════════════════════════════
-         SECTION 4 · SHOP BY WELLNESS GOAL
-    ═════════════════════════════════════════════════════════════════════ --}}
-    <section id="wellness-goals" class="bg-gradient-to-b from-white to-green-50 py-16 max-md:py-10" aria-labelledby="goals-heading">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="mb-10 text-center">
-                <h2 id="goals-heading" class="font-dmserif text-3xl font-bold text-gray-900 max-md:text-2xl">
-                    Find the Right Wellness Solution for Your Needs
-                </h2>
-                <p class="mt-2 text-gray-500">Browse by wellness goal — we have products for every health journey</p>
-            </div>
-
-            <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
-                @foreach ([
-                    ['icon' => 'moon',        'title' => 'Better Sleep',             'href' => url('/wellness-supplements-kenya')],
-                    ['icon' => 'stethoscope', 'title' => 'Pain Relief',              'href' => url('/pain-relief-recovery-products-kenya')],
-                    ['icon' => 'refresh',     'title' => 'Improved Circulation',     'href' => url('/foot-massagers-circulation-devices-kenya')],
-                    ['icon' => 'run',         'title' => 'Recovery &amp; Relaxation','href' => url('/pain-relief-recovery-products-kenya')],
-                    ['icon' => 'bolt',        'title' => 'Energy &amp; Vitality',    'href' => url('/energy-vitality-products-kenya')],
-                    ['icon' => 'user',        'title' => 'Elderly Care',             'href' => url('/home-wellness-solutions-kenya')],
-                ] as $goal)
-                    <a
-                        href="{{ $goal['href'] }}"
-                        class="naw-goal-card flex flex-col items-center gap-3 rounded-2xl bg-white px-4 py-6 text-center no-underline shadow-sm ring-1 ring-gray-100"
-                        aria-label="{!! $goal['title'] !!} products Kenya"
-                    >
-                        <span class="flex h-14 w-14 items-center justify-center rounded-full bg-green-50 text-green-700">{!! $iconSvg($goal['icon'], 'h-7 w-7') !!}</span>
-                        <span class="text-sm font-semibold text-gray-800 leading-snug">{!! $goal['title'] !!}</span>
-                    </a>
-                @endforeach
-            </div>
-        </div>
-    </section>
 
     {{-- ════════════════════════════════════════════════════════════════════
          SECTION 5 · WHY CHOOSE US
