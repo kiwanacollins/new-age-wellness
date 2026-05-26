@@ -80,7 +80,7 @@
                         @lang('shop::app.components.products.card.new')
                     </p>
 
-                    <div class="opacity-0 transition-all duration-300 group-hover:bottom-0 group-hover:opacity-100 max-lg:opacity-100 max-sm:opacity-100">
+                    <div class="opacity-0 transition-all duration-300 group-hover:bottom-0 group-hover:opacity-100 hidden">
 
                         {!! view_render_event('bagisto.shop.components.products.card.wishlist_option.before') !!}
 
@@ -140,12 +140,12 @@
                 {!! view_render_event('bagisto.shop.components.products.card.price.after') !!}
 
                 <!-- Product Actions Section -->
-                <div class="action-items flex items-center justify-between opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 max-md:hidden">
+                <div class="action-items flex items-center justify-between opacity-100 transition-all duration-300 ease-in-out">
                     @if (core()->getConfigData('sales.checkout.shopping_cart.cart_page'))
                         {!! view_render_event('bagisto.shop.components.products.card.add_to_cart.before') !!}
 
                         <button
-                            class="secondary-button w-full max-w-full p-2.5 text-sm font-medium max-sm:rounded-xl max-sm:p-2"
+                            class="secondary-button w-full max-w-full p-2.5 text-sm font-medium max-sm:rounded-lg max-sm:p-1.5 max-sm:text-xs"
                             :disabled="! product.is_saleable || isAddingToCart"
                             @click="addToCart()"
                         >
@@ -159,7 +159,7 @@
 
                     @if (core()->getConfigData('customer.settings.wishlist.wishlist_option'))
                         <span
-                            class="cursor-pointer p-2.5 text-2xl max-sm:hidden"
+                            class="cursor-pointer p-2.5 text-2xl max-sm:p-1.5 max-sm:text-lg"
                             role="button"
                             aria-label="@lang('shop::app.components.products.card.add-to-wishlist')"
                             tabindex="0"
@@ -175,7 +175,7 @@
 
                     @if (core()->getConfigData('catalog.products.settings.compare_option'))
                         <span
-                            class="icon-compare cursor-pointer p-2.5 text-2xl max-sm:hidden"
+                            class="icon-compare cursor-pointer p-2.5 text-2xl max-sm:p-1.5 max-sm:text-lg"
                             role="button"
                             aria-label="@lang('shop::app.components.products.card.add-to-compare')"
                             tabindex="0"
