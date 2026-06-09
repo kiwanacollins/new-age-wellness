@@ -43,17 +43,22 @@ export default {
 
                 const symbol = currency.symbol !== '' ? currency.symbol : currency.code;
 
+                const fractionDigits = currency.decimal ?? 2;
+
                 if (! currency.currency_position) {
                     return new Intl.NumberFormat(locale, {
                         style: "currency",
                         currency: currency.code,
+                        minimumFractionDigits: fractionDigits,
+                        maximumFractionDigits: fractionDigits,
                     }).format(price);
                 }
 
                 const formatter = new Intl.NumberFormat(locale, {
                     style: 'currency',
                     currency: currency.code,
-                    minimumFractionDigits: currency.decimal ?? 2
+                    minimumFractionDigits: fractionDigits,
+                    maximumFractionDigits: fractionDigits,
                 });
 
                 const formattedCurrency = formatter.formatToParts(price)

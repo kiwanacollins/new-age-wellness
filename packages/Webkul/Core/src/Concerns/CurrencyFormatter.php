@@ -26,6 +26,11 @@ trait CurrencyFormatter
     {
         $formatter = new \NumberFormatter(app()->getLocale(), \NumberFormatter::CURRENCY);
 
+        if (($currency->decimal ?? 2) == 0) {
+            $formatter->setAttribute(\NumberFormatter::FRACTION_DIGITS, 0);
+            $formatter->setAttribute(\NumberFormatter::MIN_FRACTION_DIGITS, 0);
+        }
+
         if ($currency->symbol) {
             /**
              * If, somehow, the currency symbol mentioned matches with the user-defined symbol,
