@@ -84,12 +84,12 @@
      SEO META — Title, Description, Keywords, OG, Schema.org
 ══════════════════════════════════════════════════════════════════ --}}
 @push('meta')
-    <meta name="title"       content="Buy Premium Health Gadgets &amp; Wellness Products in Kenya | New Age Wellness Solutions" />
-    <meta name="description" content="Kenya's trusted store for health gadgets, oxygen devices, pain relief gadgets, blood circulation machines &amp; home healthcare products. Fast delivery across Nairobi, Mombasa, Kisumu &amp; all Kenya." />
-    <meta name="keywords"    content="health gadgets Kenya, wellness products Kenya, buy wellness devices online Kenya, home healthcare products Kenya, oxygen devices Kenya, pain relief gadgets Kenya, blood circulation machine Kenya" />
+    <meta name="title"       content="New Age Wellness Solutions | Supporting Your Family's Health Journey in Kenya" />
+    <meta name="description" content="Every step toward your family's wellness matters. Shop trusted health and wellness products in Kenya — from detecting imbalances to rebuilding from within. Fast delivery across all 47 counties." />
+    <meta name="keywords"    content="wellness products Kenya, health supplements Nairobi, natural health Kenya, family wellness Kenya, health gadgets Kenya, oxygen devices Kenya, pain relief Kenya, wellness journey" />
     <meta property="og:type"        content="website" />
-    <meta property="og:title"       content="Buy Premium Health Gadgets &amp; Wellness Products in Kenya" />
-    <meta property="og:description" content="Kenya's trusted wellness store — fast delivery nationwide, M-Pesa accepted." />
+    <meta property="og:title"       content="New Age Wellness Solutions | Your Family's Wellness Journey Starts Here" />
+    <meta property="og:description" content="Trusted wellness tools for families across Kenya. Detect, regulate, and rebuild your health from within. Fast delivery, M-Pesa accepted." />
     <meta property="og:image"       content="{{ asset('images/hero-modern-wellness-products-banner.webp') }}" />
     <link rel="canonical" href="{{ url('/') }}" />
 
@@ -489,12 +489,12 @@
             <div class="z-10 flex w-full flex-col gap-6 md:w-1/2">
                 {{-- H1 --}}
                 <h1 class="naw-hero-title font-dmserif font-bold text-gray-900">
-                    Buy Premium Health Gadgets &amp; Wellness Products in Kenya
+                    Your Family's Health is Worth Every Step
                 </h1>
 
                 {{-- Sub-headline --}}
                 <p class="text-lg leading-relaxed text-gray-600 max-sm:text-base">
-                    Discover modern wellness solutions designed to support better breathing, circulation, recovery, relaxation, and everyday health. Shop trusted wellness gadgets with fast delivery across Kenya.
+                    From detecting imbalances early, to regulating the body, and rebuilding from within — we bring you trusted wellness tools that support real, lasting change for you and the people you love.
                 </p>
 
                 {{-- CTA Buttons --}}
