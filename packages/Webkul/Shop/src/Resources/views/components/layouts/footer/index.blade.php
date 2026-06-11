@@ -192,7 +192,7 @@
 
             <!-- X (Twitter) -->
             <a
-                href="https://x.com/newagewell123"
+                href="https://x.com/new_agewellness"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="New Age Wellness on X"
@@ -205,7 +205,7 @@
 
             <!-- TikTok -->
             <a
-                href="https://www.tiktok.com/@new.age.wellness2"
+                href="https://www.tiktok.com/@newagewellness_africa?_r=1&_t=ZS-9749MFpjAGN"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="New Age Wellness on TikTok"
