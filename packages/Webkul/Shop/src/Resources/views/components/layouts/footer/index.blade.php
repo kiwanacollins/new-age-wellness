@@ -150,7 +150,7 @@
             </p>
 
             <p>
-                Powered by
+                Designed by
                 <a
                     href="https://kicowebdesign.com"
                     target="_blank"
