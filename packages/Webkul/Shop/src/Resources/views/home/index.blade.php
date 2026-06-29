@@ -73,10 +73,10 @@
     $whatsAppEnquiryUrl = 'https://wa.me/'.$normalizedWhatsAppNumber.'?text='.rawurlencode("Hi! I'd like to enquire about wellness products");
 
     $heroImages = [
-        ['src' => asset('images/hero-modern-wellness-products-banner.webp'),         'alt' => 'Premium Wellness Products Kenya — New Age Wellness Solutions'],
-        ['src' => asset('images/hero-oxygen-wellness-devices-kenya-banner.webp'),     'alt' => 'Oxygen & Breathing Wellness Devices Kenya'],
-        ['src' => asset('images/hero-energy-recovery-gadgets-kenya-banner.webp'),     'alt' => 'Energy Recovery Gadgets Kenya'],
-        ['src' => asset('images/hero-wellness-at-home-kenya-banner.webp'),            'alt' => 'Wellness at Home Kenya'],
+        ['src' => asset('images/hero-modern-wellness-products-banner.webp'),         'alt' => 'Prife MagnoSeek AI-Powered Wellness Scanner Kenya'],
+        ['src' => asset('images/hero-oxygen-wellness-devices-kenya-banner.webp'),     'alt' => 'iTeraCare Pro Plus Terahertz Therapy Device Kenya'],
+        ['src' => asset('images/hero-energy-recovery-gadgets-kenya-banner.webp'),     'alt' => 'Prife Envy Specs Anti-Blue Light Wellness Glasses Kenya'],
+        ['src' => asset('images/hero-wellness-at-home-kenya-banner.webp'),            'alt' => 'Ion Shield Pendant Wellness Protection Kenya'],
     ];
 @endphp
 
@@ -665,7 +665,7 @@
             <div class="w-full md:w-1/2">
                 <img
                     src="{{ asset('images/trust-expert-reviewed-health-products-kenya-banner.webp') }}"
-                    alt="Expert Reviewed Health Products Kenya — New Age Wellness Solutions"
+                    alt="Oxytap Oxygen Infuser — Premium Wellness Device Kenya"
                     class="h-auto w-full rounded-2xl shadow-2xl"
                     loading="lazy"
                     decoding="async"
@@ -750,7 +750,7 @@
         <div class="relative">
             <img
                 src="{{ asset('images/promo-health-gadgets-10-percent-off-kenya-banner.webp') }}"
-                alt="Health Gadgets 10% Off Promotion — New Age Wellness Solutions Kenya"
+                alt="Itera Bio Foot Therapy Device — New Age Wellness Solutions Kenya"
                 class="h-auto max-h-[420px] w-full object-cover"
                 loading="lazy"
                 decoding="async"
