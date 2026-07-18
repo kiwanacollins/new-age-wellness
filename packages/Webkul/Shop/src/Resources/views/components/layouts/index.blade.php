@@ -12,6 +12,16 @@
 >
     <head>
 
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QQNB40PWWY"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-QQNB40PWWY');
+        </script>
+
         {!! view_render_event('bagisto.shop.layout.head.before') !!}
 
         <title>{{ $title ?? '' }}</title>
