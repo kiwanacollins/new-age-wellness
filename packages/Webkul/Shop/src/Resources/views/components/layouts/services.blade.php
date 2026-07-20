@@ -19,7 +19,7 @@
     $serviceCopyOverrides = [
         'Free Shipping' => [
             'title'       => 'Nationwide Wellness Delivery',
-            'description' => 'Fast delivery across Kenya for trusted health gadgets and wellness essentials.',
+            'description' => 'Fast delivery across Kenya for trusted health devices and wellness essentials.',
         ],
         'Product Replace' => [
             'title'       => 'Easy Product Replacement',

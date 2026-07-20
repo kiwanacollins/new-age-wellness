@@ -86,7 +86,7 @@
 @push('meta')
     <meta name="title"       content="New Age Wellness Solutions | Supporting Your Family's Health Journey in Kenya" />
     <meta name="description" content="Every step toward your family's wellness matters. Shop trusted health and wellness products in Kenya — from detecting imbalances to rebuilding from within. Fast delivery across all 47 counties." />
-    <meta name="keywords"    content="wellness products Kenya, health supplements Nairobi, natural health Kenya, family wellness Kenya, health gadgets Kenya, oxygen devices Kenya, pain relief Kenya, wellness journey" />
+    <meta name="keywords"    content="wellness products Kenya, health supplements Nairobi, natural health Kenya, family wellness Kenya, health devices Kenya, oxygen devices Kenya, pain relief Kenya, wellness journey" />
     <meta property="og:type"        content="website" />
     <meta property="og:title"       content="New Age Wellness Solutions | Your Family's Wellness Journey Starts Here" />
     <meta property="og:description" content="Trusted wellness tools for families across Kenya. Detect, regulate, and rebuild your health from within. Fast delivery, M-Pesa accepted." />
@@ -100,7 +100,7 @@
         "@@type":"WebSite",
         "name":"New Age Wellness Solutions",
         "url":"{{ url('/') }}",
-        "description":"Kenya's trusted store for premium health gadgets and wellness products",
+        "description":"Kenya's trusted store for premium health devices and wellness products",
         "potentialAction":{
             "@@type":"SearchAction",
             "target":"{{ route('shop.search.index') }}?query={search_term_string}",
@@ -129,7 +129,7 @@
         "mainEntity":[
             {"@@type":"Question","name":"Do you deliver wellness products across Kenya?","acceptedAnswer":{"@@type":"Answer","text":"Yes, we deliver to Nairobi, Mombasa, Kisumu, Nakuru, Eldoret, Thika, Kiambu and all major towns in Kenya."}},
             {"@@type":"Question","name":"Do you accept M-Pesa payments?","acceptedAnswer":{"@@type":"Answer","text":"Yes, we accept M-Pesa, card payments, and cash on delivery."}},
-            {"@@type":"Question","name":"Are your health gadgets original?","acceptedAnswer":{"@@type":"Answer","text":"Yes, all our products are genuine, expert-reviewed wellness devices sourced from trusted manufacturers."}},
+            {"@@type":"Question","name":"Are your health devices original?","acceptedAnswer":{"@@type":"Answer","text":"Yes, all our products are genuine, expert-reviewed wellness devices sourced from trusted manufacturers."}},
             {"@@type":"Question","name":"How long does delivery take in Nairobi?","acceptedAnswer":{"@@type":"Answer","text":"Same-day or next-day delivery in Nairobi. 1–3 business days for other towns."}},
             {"@@type":"Question","name":"Can I pay on delivery?","acceptedAnswer":{"@@type":"Answer","text":"Yes, cash on delivery is available for orders within Nairobi and selected towns."}}
         ]
@@ -473,7 +473,7 @@
 
 <x-shop::layouts>
 
-    <x-slot:title>Buy Premium Health Gadgets &amp; Wellness Products in Kenya | New Age Wellness Solutions</x-slot>
+    <x-slot:title>Buy Premium Health Devices &amp; Wellness Products in Kenya | New Age Wellness Solutions</x-slot>
 
     {{-- ════════════════════════════════════════════════════════════════════
          SECTION 1 · HERO — Two-column: Text left · Image slider right
@@ -504,7 +504,7 @@
                         class="naw-pulse inline-flex items-center gap-2 rounded-xl bg-green-600 px-7 py-3.5 text-base font-semibold text-white shadow-md transition-colors hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                     >
                         {!! $iconSvg('cart', 'h-5 w-5') !!}
-                        Shop Health Gadgets
+                        Shop Health Devices
                     </a>
                     <a
                         href="{{ route('shop.search.index') }}"
@@ -552,7 +552,7 @@
                 ['truck', 'Nationwide Delivery in Kenya',  'Same-day Nairobi · 1–3 days elsewhere'],
                 ['shield-check', 'Trusted Wellness Products',     'Expert-reviewed &amp; quality-assured'],
                 ['support', 'Expert Customer Support',       'Before &amp; after-purchase guidance'],
-                ['award', 'Premium Quality',               'Genuine gadgets, satisfaction guaranteed'],
+                ['award', 'Premium Quality',               'Genuine devices, satisfaction guaranteed'],
             ] as $trust)
                 <div class="flex items-center gap-3">
                     <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-50 text-green-700">{!! $iconSvg($trust[0], 'h-5 w-5') !!}</span>
@@ -574,14 +574,14 @@
                 <h2 id="categories-heading" class="font-dmserif text-3xl font-bold text-gray-900 max-md:text-2xl">
                     Shop Wellness Solutions by Category
                 </h2>
-                <p class="mt-2 text-gray-500">Find the perfect health gadget for your wellness journey</p>
+                <p class="mt-2 text-gray-500">Find the perfect health device for your wellness journey</p>
             </div>
 
             <div class="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
                 @foreach ([
-                    ['icon' => 'activity',    'title' => 'Health Gadgets',                        'kw' => 'health gadgets Kenya',            'href' => url('/health-gadgets-kenya'),                      'color' => 'bg-blue-50 border-blue-100'],
+                    ['icon' => 'activity',    'title' => 'Health Devices',                        'kw' => 'health devices Kenya',            'href' => url('/health-devices-kenya'),                      'color' => 'bg-blue-50 border-blue-100'],
                     ['icon' => 'lungs',       'title' => 'Oxygen &amp; Breathing',                'kw' => 'oxygen devices Kenya',            'href' => url('/oxygen-devices-kenya'),                      'color' => 'bg-sky-50 border-sky-100'],
-                    ['icon' => 'stethoscope', 'title' => 'Pain Relief &amp; Recovery',            'kw' => 'pain relief gadgets Kenya',       'href' => url('/pain-relief-recovery-products-kenya'),       'color' => 'bg-red-50 border-red-100'],
+                    ['icon' => 'stethoscope', 'title' => 'Pain Relief &amp; Recovery',            'kw' => 'pain relief devices Kenya',       'href' => url('/pain-relief-recovery-products-kenya'),       'color' => 'bg-red-50 border-red-100'],
                     ['icon' => 'refresh',     'title' => 'Foot Massagers &amp; Circulation',      'kw' => 'blood circulation Kenya',         'href' => url('/foot-massagers-circulation-devices-kenya'),  'color' => 'bg-pink-50 border-pink-100'],
                     ['icon' => 'home',        'title' => 'Home Wellness Solutions',               'kw' => 'home healthcare Kenya',           'href' => url('/home-wellness-solutions-kenya'),             'color' => 'bg-emerald-50 border-emerald-100'],
                     ['icon' => 'bolt',        'title' => 'Energy &amp; Supplements',              'kw' => 'wellness supplements Kenya',      'href' => url('/wellness-supplements-kenya'),                'color' => 'bg-amber-50 border-amber-100'],
@@ -639,7 +639,7 @@
 
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ([
-                    ['target', 'Premium Wellness Products',      'Carefully selected health gadgets and wellness solutions reviewed by our expert team.'],
+                    ['target', 'Premium Wellness Products',      'Carefully selected health devices and wellness solutions reviewed by our expert team.'],
                     ['truck', 'Fast Delivery Across Kenya',     'Nairobi, Mombasa, Kisumu, Nakuru, Eldoret &amp; more. Same-day delivery available in Nairobi.'],
                     ['support', 'Expert Customer Support',        'Professional guidance before and after your purchase. We\'re here to help you get the most value.'],
                     ['award', 'Trusted Wellness Store',         'Focused on quality, comfort, and modern health solutions for Kenyan households.'],
@@ -679,7 +679,7 @@
                     Every Product is Vetted by Our Wellness Experts
                 </h2>
                 <p class="mt-4 text-lg leading-relaxed text-green-100">
-                    We don't just sell gadgets — we rigorously test and review every wellness product we stock. Only the best health devices make it onto our shelves, ensuring you get genuine, effective solutions for your wellbeing.
+                    We don't just sell devices — we rigorously test and review every wellness product we stock. Only the best health devices make it onto our shelves, ensuring you get genuine, effective solutions for your wellbeing.
                 </p>
                 <ul class="mt-6 space-y-3">
                     @foreach ([
@@ -720,12 +720,12 @@
 
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ([
-                    ['phone', 'Best Health Gadgets for Home Use in Kenya',            'Discover the top-rated health gadgets every Kenyan household should have for daily wellness support.'],
+                    ['phone', 'Best Health Devices for Home Use in Kenya',            'Discover the top-rated health devices every Kenyan household should have for daily wellness support.'],
                     ['refresh', 'How to Improve Blood Circulation Naturally',            'Learn practical tips and wellness devices that help boost blood circulation for better energy and health.'],
                     ['lungs', 'Benefits of Oxygen Therapy at Home',                   'Find out how home oxygen therapy devices can improve breathing, energy levels, and overall wellbeing.'],
                     ['briefcase', 'Best Wellness Products for Busy Professionals',         'For the modern Kenyan professional — wellness solutions that fit your lifestyle and busy schedule.'],
-                    ['stethoscope', 'Top Pain Relief Devices in Kenya',                     'Explore the most effective pain relief gadgets available online in Kenya, reviewed by our wellness team.'],
-                    ['home', 'Home Wellness Gadgets Every Family Should Have',        'Build a healthier home with these essential wellness devices for families across Kenya.'],
+                    ['stethoscope', 'Top Pain Relief Devices in Kenya',                     'Explore the most effective pain relief devices available online in Kenya, reviewed by our wellness team.'],
+                    ['home', 'Home Wellness Devices Every Family Should Have',        'Build a healthier home with these essential wellness devices for families across Kenya.'],
                 ] as $i => $blog)
                     <article class="naw-why-card flex flex-col rounded-2xl p-6 transition-shadow hover:shadow-md">
                         <span class="naw-why-icon mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-50 text-green-700">{!! $iconSvg($blog[0], 'h-5 w-5') !!}</span>
@@ -746,7 +746,7 @@
     {{-- ════════════════════════════════════════════════════════════════════
          PROMO BANNER — 10% off + urgency
     ═════════════════════════════════════════════════════════════════════ --}}
-    <section class="relative overflow-hidden" aria-label="Health gadgets 10 percent off promotion Kenya">
+    <section class="relative overflow-hidden" aria-label="Health devices 10 percent off promotion Kenya">
         <div class="relative">
             <img
                 src="{{ asset('images/promo-health-gadgets-10-percent-off-kenya-banner.webp') }}"
@@ -761,7 +761,7 @@
                 <div class="px-8 text-white md:px-16">
                     <span class="mb-3 inline-block rounded-full bg-amber-400 px-4 py-1 text-sm font-bold text-black uppercase tracking-wide">Limited Offer</span>
                     <h2 class="font-dmserif text-4xl font-bold leading-tight max-md:text-2xl max-sm:text-xl">
-                        Save 10% on<br>Health Gadgets Today
+                        Save 10% on<br>Health Devices Today
                     </h2>
                     <p class="mt-3 max-w-md text-lg text-gray-200 max-sm:text-base">
                         Get your favourite wellness products at a special price. Fast delivery across Kenya.
@@ -824,9 +824,9 @@
                     [
                         'name'    => 'Aisha K.',
                         'city'    => 'Kisumu',
-                        'product' => 'Pain Relief Recovery Gadget',
+                        'product' => 'Pain Relief Recovery Device',
                         'stars'   => 5,
-                        'review'  => 'The customer support was amazing. They helped me choose the right pain relief gadget for my back pain. After two weeks of use, the difference is night and day!',
+                        'review'  => 'The customer support was amazing. They helped me choose the right pain relief device for my back pain. After two weeks of use, the difference is night and day!',
                         'avatar'  => 'A',
                         'color'   => 'bg-amber-600',
                     ],
@@ -1006,11 +1006,11 @@
                 @foreach ([
                     ['Do you deliver wellness products across Kenya?',             'Yes! We deliver to Nairobi, Mombasa, Kisumu, Nakuru, Eldoret, Thika, Kiambu and all major towns across Kenya. Same-day delivery is available in Nairobi.'],
                     ['Do you accept M-Pesa payments?',                             'Absolutely. We accept M-Pesa, Visa, Mastercard, and cash on delivery. M-Pesa is our most popular payment method.'],
-                    ['Are your health gadgets original and genuine?',              'Yes. Every product on our store is carefully vetted and sourced from trusted manufacturers. We only list genuine, quality wellness devices.'],
+                    ['Are your health devices original and genuine?',              'Yes. Every product on our store is carefully vetted and sourced from trusted manufacturers. We only list genuine, quality wellness devices.'],
                     ['How long does delivery take in Nairobi?',                    'Same-day or next-day delivery in Nairobi CBD and most estates. We\'ll confirm your delivery timeline when you place your order.'],
                     ['Can I order wellness products online in Kenya?',             'Yes! You can order directly on our website, or via WhatsApp. We make it easy to shop for wellness products from anywhere in Kenya.'],
-                    ['Which wellness gadgets are best for elderly people?',        'We recommend foot massagers, blood circulation devices, TENS pain relief machines, and home oxygen therapy devices for elderly customers. Our team can advise you.'],
-                    ['Do your products come with a warranty?',                     'Yes, most of our wellness gadgets come with manufacturer warranties. Check the individual product pages for warranty details.'],
+                    ['Which wellness devices are best for elderly people?',        'We recommend foot massagers, blood circulation devices, TENS pain relief machines, and home oxygen therapy devices for elderly customers. Our team can advise you.'],
+                    ['Do your products come with a warranty?',                     'Yes, most of our wellness devices come with manufacturer warranties. Check the individual product pages for warranty details.'],
                     ['Can I pay on delivery?',                                     'Yes, cash on delivery is available for orders in Nairobi and selected towns. Contact us via WhatsApp to confirm availability for your location.'],
                 ] as $faq)
                     <details class="group rounded-xl border border-gray-100 bg-gray-50 px-5 py-4 shadow-sm">
@@ -1038,7 +1038,7 @@
                 Start Your Wellness Journey Today
             </h2>
             <p class="mx-auto mt-4 max-w-xl text-lg text-green-100">
-                Shop trusted health gadgets and wellness products designed to support healthier living across Kenya.
+                Shop trusted health devices and wellness products designed to support healthier living across Kenya.
             </p>
             <div class="mt-8 flex flex-wrap justify-center gap-4">
                 <a
